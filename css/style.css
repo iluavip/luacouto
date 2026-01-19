@@ -671,6 +671,7 @@ button:active {
     height: 100%;
     position: relative;
     overflow: hidden;
+    background-color: transparent;
 }
 
 .home::after {
