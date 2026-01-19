@@ -694,7 +694,7 @@ button:active {
     width: auto;
     height: auto;
     z-index: 0;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-60%) translateY(-50%); /* Ajustado para mover mais para a esquerda */
     object-fit: cover;
 }
 
