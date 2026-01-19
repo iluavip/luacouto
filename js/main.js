@@ -74,24 +74,6 @@ $(function () {
         });
     });
 
-    /*============= HOME SLIDER ============= */
-    /* $('.home').vegas({
-        overlay: true,
-        transition: 'fade',
-        transitionDuration: 4000,
-        delay: 10000,
-        color: 'red',
-        animation: 'random',
-        animationDuration: 20000,
-        slides: [
-            { src: 'img/hero-01.jpg' },
-            { src: 'img/hero-02.jpg' },
-            { src: 'img/hero-03.jpg' },
-            { src: 'img/hero-04.jpg' }
-        ]
-    });*/
-
-});
 
 /*============= SCROLL TO TOP ============= */
 $(document).ready(function () {
