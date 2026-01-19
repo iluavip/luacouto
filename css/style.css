@@ -1893,8 +1893,23 @@ button:active {
     }
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #353434;
+    font-size: 1.6rem;
+    background-color: #fff;
+    line-height: 1.6;
+    letter-spacing: .08rem;
+    font-weight: 400;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*--------------home-------------------*/
 .home {
-    height: 100vh;
+    height: 100%; /* Ocupa a altura total do body */
     position: relative;
     overflow: hidden; /* Garante que nada saia dos limites do header */
 }
@@ -1906,9 +1921,39 @@ button:active {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Overlay para legibilidade */
-    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay para legibilidade */
+    z-index: 1; /* Acima do vídeo, abaixo do conteúdo */
 }
+
+.logo-box {
+    top: 4rem;
+    left: 4rem;
+    position: absolute;
+    z-index: 2;
+}
+
+.home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Garante que o conteúdo fique acima do overlay */
+    width: 100%;
+}
+
+.arrow {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: 10px;
+    display: block;
+    z-index: 2;
+}
+
 .bg-video {
     position: absolute;
     top: 50%;
@@ -1917,8 +1962,9 @@ button:active {
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -1;
+    z-index: 0;
     transform: translateX(-50%) translateY(-50%);
     object-fit: cover; /* Cobre a área mantendo a proporção */
 }
+
 
