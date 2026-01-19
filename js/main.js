@@ -75,7 +75,7 @@ $(function () {
     });
 
     /*============= HOME SLIDER ============= */
-    $('.home').vegas({
+    /* $('.home').vegas({
         overlay: true,
         transition: 'fade',
         transitionDuration: 4000,
@@ -89,7 +89,7 @@ $(function () {
             { src: 'img/hero-03.jpg' },
             { src: 'img/hero-04.jpg' }
         ]
-    });
+    });*/
 
 });
 
