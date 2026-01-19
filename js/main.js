@@ -192,3 +192,4 @@ $('#contact-form').on('submit', function (e) {
         return false;
     }
 });
+});
