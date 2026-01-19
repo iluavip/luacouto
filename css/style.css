@@ -48,6 +48,7 @@ GLOSSY - ONE PAGE TEMPLATE
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    height: 100%;
 }
 
 /*------ width < 75em ------*/
@@ -79,6 +80,7 @@ body {
     line-height: 1.6;
     letter-spacing: .08rem;
     font-weight: 400;
+    height: 100%;
 }
 
 .heading-primary {
@@ -153,7 +155,7 @@ button:active {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 999;
+    z-index: 9999;
     overflow: hidden;
 }
 
@@ -410,7 +412,7 @@ button:active {
 .nav-icon {
     position: fixed;
     border-radius: 50%;
-    z-index: 99;
+    z-index: 9999;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
     background-color: rgba(255, 255, 255, 0.5);
     height: 5rem;
@@ -441,6 +443,9 @@ button:active {
 
 /*------ width < 991px ------*/
 @media only screen and (max-width: 991px) {
+    .nav-icon {
+        z-index: 9999;
+    }
     .nav-icon span {
         margin-top: 1.3rem;
     }
@@ -495,7 +500,7 @@ button:active {
 
 .navbg {
     background: radial-gradient(#7F00FF, #E100FF);
-    z-index: 90;
+    z-index: 9000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
     width: 3000px;
     height: 3000px;
@@ -510,7 +515,7 @@ button:active {
 
 .navbar-nav {
     position: fixed;
-    z-index: 0;
+    z-index: 9001;
     top: 50%;
     left: 50%;
     -webkit-transform: translateY(-50%) translateX(-50%);
@@ -522,7 +527,7 @@ button:active {
 }
 
 .navbar-nav.fadeIn {
-    z-index: 9000;
+    z-index: 9001;
 }
 
 .nav-item {
@@ -663,14 +668,40 @@ button:active {
 
 /*--------------home-------------------*/
 .home {
-    height: 100vh;
+    height: 100%;
     position: relative;
+    overflow: hidden;
+}
+
+.home::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
 }
 
 .logo-box {
     top: 4rem;
     left: 4rem;
     position: absolute;
+    z-index: 2;
 }
 
 /*------ width < 899.52px ------*/
@@ -714,6 +745,8 @@ button:active {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
 }
 
 .home-content h1 {
@@ -755,7 +788,6 @@ button:active {
     animation-delay: 2s;
     animation-duration: 3s;
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
     color: #fff;
     font-family: 'Roboto Condensed', sans-serif;
 }
@@ -789,6 +821,7 @@ button:active {
     left: 50%;
     bottom: 10px;
     display: block;
+    z-index: 2;
 }
 
 .arrow a {
@@ -1892,79 +1925,3 @@ button:active {
         margin-top: 10px;
     }
 }
-
-body {
-    font-family: 'Roboto', sans-serif;
-    color: #353434;
-    font-size: 1.6rem;
-    background-color: #fff;
-    line-height: 1.6;
-    letter-spacing: .08rem;
-    font-weight: 400;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-/*--------------home-------------------*/
-.home {
-    height: 100%; /* Ocupa a altura total do body */
-    position: relative;
-    overflow: hidden; /* Garante que nada saia dos limites do header */
-}
-
-.home::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Overlay para legibilidade */
-    z-index: 1; /* Acima do vídeo, abaixo do conteúdo */
-}
-
-.logo-box {
-    top: 4rem;
-    left: 4rem;
-    position: absolute;
-    z-index: 2;
-}
-
-.home-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: 2; /* Garante que o conteúdo fique acima do overlay */
-    width: 100%;
-}
-
-.arrow {
-    position: absolute;
-    text-align: center;
-    left: 50%;
-    bottom: 10px;
-    display: block;
-    z-index: 2;
-}
-
-.bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 0;
-    transform: translateX(-50%) translateY(-50%);
-    object-fit: cover; /* Cobre a área mantendo a proporção */
-}
-
-
