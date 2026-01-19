@@ -35,6 +35,18 @@ $(function () {
 
     });
 
+    /*============= FORÇA PLAY NO VÍDEO DE FUNDO ============= */
+    var video = document.querySelector(".bg-video");
+    if (video) {
+        var promise = video.play();
+        if (promise !== undefined) {
+            promise.catch(function(error) {
+                // Autoplay foi bloqueado.
+                console.error("Autoplay do vídeo foi bloqueado pelo navegador:", error);
+            });
+        }
+    }
+
     /*============= SCROLLIT ============= */
     $.scrollIt({
         upKey: 38, // key code to navigate to the next section
