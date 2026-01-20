@@ -696,7 +696,7 @@ button:active {
     z-index: 0;
     transform: translateX(-50%) translateY(-50%);
     object-fit: cover;
-    object-position: 70% 65%; /* Ajustado para mover mais para cima */
+    object-position: 70% 80%; /* Ajustado para mover mais para cima */
 }
 
 .logo-box {
