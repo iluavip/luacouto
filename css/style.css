@@ -694,8 +694,9 @@ button:active {
     width: auto;
     height: auto;
     z-index: 0;
-    transform: translateX(-50%) translateY(-50%) scale(0.8); /* Zoom out */
+    transform: translateX(-50%) translateY(-50%);
     object-fit: cover;
+    object-position: 70% 50%;
 }
 
 .logo-box {
