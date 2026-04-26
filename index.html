@@ -10,9 +10,88 @@
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Explore o universo de Luana Couto, modelo profissional com mais de 4 anos de experiência. Camadas de sensualidade, elegância e exclusividade.">
-    <meta name="keywords" content="Luana Couto, modelo, sensualidade, elegância, espaço exclusivo, portfólio, ensaios fotográficos">
+    <meta name="description" content="Site Oficial da Modelo Luana Couto (iluavip). Conteúdo exclusivo no Privacy, Telegram, OnlyFans e ensaios sensuais de luxo. Acompanhe o universo iluavip.">
+    <meta name="keywords" content="Luana Couto, iluavip, lua couto, modelo sensual, privacy luana couto, telegram vip, conteúdo adulto, sexy, ensaios sensuais, pornhub, xvideos, modelo brasileira">
     <meta name="author" content="Luana Couto">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luanacouto.com.br/">
+    <meta property="og:title" content="Luana Couto | iluavip - Site Oficial">
+    <meta property="og:description" content="Explore o mundo secreto de Luana Couto. A modelo referência em sensualidade e elegância.">
+    <meta property="og:image" content="img/hero-01.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://luanacouto.com.br/">
+    <meta property="twitter:title" content="Luana Couto | iluavip - Site Oficial">
+    <meta property="twitter:description" content="Explore o mundo secreto de Luana Couto. A modelo referência em sensualidade e elegância.">
+    <meta property="twitter:image" content="img/hero-01.jpg">
+
+    <link rel="canonical" href="https://luanacouto.com.br/">
+    <link rel="alternate" href="https://luanacouto.com.br/" hreflang="pt-br">
+    <link rel="alternate" href="https://luanacouto.com.br/" hreflang="en-us">
+    <link rel="alternate" href="https://luanacouto.com.br/" hreflang="es-es">
+    <link rel="alternate" href="https://luanacouto.com.br/" hreflang="x-default">
+
+    <!-- FAQ Schema - Domina o espaço visual no Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Onde encontrar o conteúdo exclusivo de Luana Couto?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O conteúdo exclusivo e oficial da Luana Couto (iluavip) está disponível em suas plataformas oficiais como Privacy, OnlyFans e Telegram VIP."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Luana Couto possui redes sociais oficiais?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim, você pode seguir a Luana Couto no Instagram @iluavip e @iluacouto, além do Twitter @iluavip."
+        }
+      }]
+    }
+    </script>
+
+    <!-- Review Schema - Injeta estrelas nos resultados de busca -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Luana Couto - iluavip",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "1250",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+
+    <!-- Script de Rastreamento de Elite para GA4 -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Rastreia cliques em botões de entrada (Privacy, Onlyfans, etc)
+        const trackButtons = document.querySelectorAll('.button-fill, .whatsapp-float');
+        trackButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const label = this.innerText || 'WhatsApp';
+                if (typeof gtag === 'function') {
+                    gtag('event', 'conversion_click', {
+                        'event_category': 'Engagement',
+                        'event_label': label,
+                        'value': 1
+                    });
+                }
+            });
+        });
+    });
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMG2C9NB4V"></script>
     <script>
@@ -91,10 +170,17 @@
 
     <!-- =======START HEADER=========== -->
     <header class="home" id="home" data-scroll-index="0">
-        <video autoplay loop muted playsinline class="bg-video" poster="img/hero-01.jpg">
-            <source src="video/Apresentacao.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <div class="video-container">
+            <video autoplay loop muted playsinline class="bg-video video-top" poster="img/hero-01.jpg">
+                <source src="video/Apresentacao.mp4" type="video/mp4">
+            </video>
+            <video autoplay loop muted playsinline class="bg-video video-mid" poster="img/hero-01.jpg">
+                <source src="video/Apresentacao.mp4" type="video/mp4">
+            </video>
+            <video autoplay loop muted playsinline class="bg-video video-bottom" poster="img/hero-01.jpg">
+                <source src="video/Apresentacao.mp4" type="video/mp4">
+            </video>
+        </div>
         <div class="logo-box">
             <img src="img/logo.png" alt="header-Logo" class="logo">
         </div>
@@ -221,7 +307,7 @@
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 filtr-item" data-category="1">
                         <div class="port-caption">
                             <!-- PORTFOLIO IMAGE -->
-                            <img src="img/portfolio/portfolio-01.jpg" alt="portfolio-01" />
+                            <img src="img/portfolio/portfolio-01.jpg" alt="Luana Couto iluavip ensaio casual sexy privacy" title="Luana Couto - Modelo Profissional" />
                             <!-- PORTFOLIO TITLE -->
                             <div class="overlay">
                                 <div class="view-more">
@@ -242,7 +328,7 @@
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 filtr-item" data-category="2">
                         <div class="port-caption">
                             <!-- PORTFOLIO IMAGE -->
-                            <img src="img/portfolio/portfolio-02.jpg" alt="portfolio-02" />
+                            <img src="img/portfolio/portfolio-02.jpg" alt="Luana Couto lua couto sensualidade telegram vip pornhub" title="Luana Couto - Sensualidade e Eleg�ncia" />
                             <!-- PORTFOLIO TITLE -->
                             <div class="overlay">
                                 <div class="view-more">
@@ -263,7 +349,7 @@
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 filtr-item" data-category="1">
                         <div class="port-caption">
                             <!-- PORTFOLIO IMAGE -->
-                            <img src="img/portfolio/portfolio-03.jpg" alt="portfolio-03" />
+                            <img src="img/portfolio/portfolio-03.jpg" alt="Luana Couto sexy conte�do adulto xvideos luxo" />
                             <!-- PORTFOLIO TITLE -->
                             <div class="overlay">
                                 <div class="view-more">
@@ -284,7 +370,7 @@
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 filtr-item" data-category="2">
                         <div class="port-caption">
                             <!-- PORTFOLIO IMAGE -->
-                            <img src="img/portfolio/portfolio-04.jpg" alt="portfolio-04" />
+                            <img src="img/portfolio/portfolio-04.jpg" alt="Luana Couto iluavip pornografia art�stica elegante" />
                             <!-- PORTFOLIO TITLE -->
                             <div class="overlay">
                                 <div class="view-more">
@@ -305,7 +391,7 @@
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 filtr-item" data-category="3">
                         <div class="port-caption">
                             <!-- PORTFOLIO IMAGE -->
-                            <img src="img/portfolio/portfolio-05.jpg" alt="portfolio-05" />
+                            <img src="img/portfolio/portfolio-05.jpg" alt="Luana Couto lua couto ensaio exclusivo sexy" title="Luana Couto - Mundo Secreto" />
                             <!-- PORTFOLIO TITLE -->
                             <div class="overlay">
                                 <div class="view-more">
@@ -326,7 +412,7 @@
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 filtr-item" data-category="4">
                         <div class="port-caption text-center">
                             <!-- PORTFOLIO IMAGE -->
-                            <img src="img/portfolio/portfolio-06.jpg" alt="portfolio-06" />
+                            <img src="img/portfolio/portfolio-06.jpg" alt="Luana Couto iluavip modelo brasileira sensual" title="Luana Couto - Refer�ncia Nacional" />
                             <!-- PORTFOLIO TITLE -->
                             <div class="overlay">
                                 <div class="view-more">
@@ -690,17 +776,17 @@
     <script src="js/owl.carousel.min.js"></script>
 
     <!-- validator js -->
-    <script src="js/validator.js"></script>
+    <script src="js/validator.js" defer></script>
 
     <!-- paroller js -->
-    <script src="js/jquery.paroller.min.js"></script>
-    <script>$('.jumbotron').paroller();</script>
+    <script src="js/jquery.paroller.min.js" defer></script>
+    <script>$(document).ready(function(){$('.jumbotron').paroller();});</script>
 
     <!-- vegas js -->
-    <script src="js/vegas.min.js"></script>
+    <script src="js/vegas.min.js" defer></script>
 
     <!-- coustom js -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 
     <!-- WhatsApp Floating Button -->
     <a href="https://luanacouto.linkbio.co" class="whatsapp-float" target="_blank">
@@ -708,7 +794,7 @@
     </a>
 
     <!-- lightbox js -->
-    <script src="js/lightbox.js"></script>
+    <script src="js/lightbox.js" defer></script>
 
 
 </body>

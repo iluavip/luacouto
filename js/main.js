@@ -35,16 +35,20 @@ $(function () {
 
     });
 
-    /*============= FORÇA PLAY NO VÍDEO DE FUNDO ============= */
-    var video = document.querySelector(".bg-video");
-    if (video) {
-        var promise = video.play();
-        if (promise !== undefined) {
-            promise.catch(function(error) {
-                // Autoplay foi bloqueado.
-                console.error("Autoplay do vídeo foi bloqueado pelo navegador:", error);
-            });
-        }
+    /*============= DESSINCRONIZAÇÃO DO VÍDEO TRIPLO ============= */
+    var vTop = document.querySelector(".video-top");
+    var vMid = document.querySelector(".video-mid");
+    var vBottom = document.querySelector(".video-bottom");
+
+    if (vTop && vMid && vBottom) {
+        // Define tempos de início diferentes para parecerem vídeos distintos
+        vMid.currentTime = 5;    // Começa aos 5 segundos
+        vBottom.currentTime = 10; // Começa aos 10 segundos
+
+        // Garante que todos comecem a rodar
+        vTop.play();
+        vMid.play();
+        vBottom.play();
     }
 
     /*============= SCROLLIT ============= */
