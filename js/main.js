@@ -66,11 +66,15 @@ $(function () {
         if (menu.hasClass('showMenu')) { // Hide menu if it's open
             menu.removeClass('showMenu').addClass('hideMenu');
             nav.removeClass('fadeIn');
-        } else if (menu.hasClass('hideMenu')) { // Show menu and remove hideMenu
+            // Remove a visibilidade após a animação
+            setTimeout(function() {
+                if(menu.hasClass('hideMenu')) {
+                    menu.hide();
+                }
+            }, 500);
+        } else { // Show menu
+            menu.show();
             menu.removeClass('hideMenu').addClass('showMenu');
-            nav.addClass('fadeIn')
-        } else {
-            menu.addClass('showMenu'); // Initial show menu
             nav.addClass('fadeIn');
         }
     };
@@ -121,9 +125,10 @@ var options = {
     delay: 0,
     delayMode: "alternate",
     easing: "ease-out",
-    layout: "sameSize",
+    layout: "packed",
     selector: ".filtr-container",
-    setupControls: true
+    setupControls: true,
+    gutterPixels: 0 // Garante alinhamento perfeito com o grid
 }
 var filterizd = $(".filtr-container").filterizr(options);
 filterizd.filterizr("setOptions", options);
@@ -176,32 +181,4 @@ $('.testimonials .owl-carousel').owlCarousel({
     smartSpeed: 500
 });
 
-
-/*========= VALIDATOR =========*/
-
-// contact form validator
-$('#contact-form').validator();
-
-$('#contact-form').on('submit', function (e) {
-    if (!e.isDefaultPrevented()) {
-        var url = "contact.php";
-
-        $.ajax({
-            type: "POST",
-            url: url,
-            data: $(this).serialize(),
-            success: function (data) {
-                var messageAlert = 'alert-' + data.type;
-                var messageText = data.message;
-
-                var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-                if (messageAlert && messageText) {
-                    $('#contact-form').find('.messages').html(alertBox);
-                    $('#contact-form')[0].reset();
-                }
-            }
-        });
-        return false;
-    }
-});
 });

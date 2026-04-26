@@ -1,0 +1,96 @@
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    left: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 2000; /* Acima de tudo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    color: #FFF;
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        left: 20px;
+        font-size: 25px;
+    }
+}
+
+/* ELIMINAÇÃO TOTAL DE INTERFERÊNCIA NO CENTRO DA TELA */
+
+/* 1. Oculta fisicamente o fundo do menu quando não está ativo */
+.navbg:not(.showMenu) {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    pointer-events: none !important;
+}
+
+/* 2. Garante que a navbar fixa não tenha um container invisível gigante */
+.navbar {
+    width: auto !important;
+    height: auto !important;
+    pointer-events: none !important; /* Deixa passar para as fotos */
+}
+
+/* 3. Reativa cliques apenas no ícone do menu */
+.nav-icon {
+    pointer-events: auto !important;
+}
+
+/* 4. Impede que o header e o logo-box cubram o portfólio */
+.logo-box, .home-content {
+    pointer-events: none !important;
+}
+
+/* 5. Blindagem de elite para o portfólio */
+.portfolio {
+    position: relative;
+    z-index: 100 !important;
+}
+
+.filtr-container {
+    pointer-events: auto !important;
+}
+
+.filtr-item {
+    z-index: 101 !important;
+}
+
+.filtr-item:hover {
+    z-index: 102 !important;
+}
+
+.port-caption {
+    pointer-events: auto !important;
+    cursor: pointer;
+}
+
+.overlay {
+    pointer-events: auto !important;
+}
+
+.view-more, .view-more a {
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 105 !important;
+}
