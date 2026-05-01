@@ -1,0 +1,21 @@
+{
+  "name": "Luana Couto Official",
+  "short_name": "LuanaCouto",
+  "description": "Site Oficial da Modelo Luana Couto (iluavip). Conteúdo exclusivo e ensaios profissionais.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a0033",
+  "theme_color": "#7f00ff",
+  "icons": [
+    {
+      "src": "img/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
