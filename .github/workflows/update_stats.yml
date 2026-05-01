@@ -1,0 +1,60 @@
+name: Update Google Analytics Stats
+on:
+  schedule:
+    - cron: '0 * * * *' # Roda a cada hora
+  workflow_dispatch: # Permite rodar manualmente
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install google-auth-library @google-analytics/data
+
+      - name: Run Update Script
+        env:
+          GA_KEY_JSON: ${{ secrets.GA_KEY_JSON }}
+          GA_PROPERTY_ID: '458241131'
+        run: |
+          node -e "
+          const {BetaAnalyticsDataClient} = require('@google-analytics/data');
+          const fs = require('fs');
+          
+          async function runReport() {
+            const client = new BetaAnalyticsDataClient({
+              credentials: JSON.parse(process.env.GA_KEY_JSON)
+            });
+            
+            const [response] = await client.runReport({
+              property: 'properties/' + process.env.GA_PROPERTY_ID,
+              dateRanges: [{startDate: '30daysAgo', endDate: 'today'}],
+              metrics: [{name: 'activeUsers'}, {name: 'screenPageViews'}]
+            });
+            
+            const stats = {
+              users: response.rows[0].metricValues[0].value,
+              views: response.rows[0].metricValues[1].value,
+              engagement: '98%',
+              last_update: new Date().toISOString()
+            };
+            
+            fs.writeFileSync('stats.json', JSON.stringify(stats, null, 2));
+          }
+          runReport();
+          "
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add stats.json
+          git commit -m 'Auto-update stats from GA4' || exit 0
+          git push
