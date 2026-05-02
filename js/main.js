@@ -26,32 +26,8 @@ $(function () {
     var wind = $(window);
 
     /*============= PRELOADER ============= */
-    /*============= UPDATE IMPACT STATS ============= */
-    function updateImpactStats() {
-        fetch('stats.json')
-            .then(response => response.json())
-            .then(data => {
-                const elements = {
-                    'users': data.users,
-                    'views': data.views,
-                    'engagement': data.engagement
-                };
-
-                // Atualiza os textos com animação simples
-                if (document.querySelector('#impact h3')) {
-                    document.querySelectorAll('.impact-card h3').forEach((el, index) => {
-                        const keys = ['users', 'views', 'engagement'];
-                        const value = elements[keys[index]];
-                        el.innerText = (keys[index] === 'engagement') ? value : '+' + parseInt(value).toLocaleString('pt-BR');
-                    });
-                }
-            })
-            .catch(err => console.error('Erro ao carregar estatísticas:', err));
-    }
-
-    $(document).ready(function () {
-        updateImpactStats();
-        // ... rest of ready function
+    $(window).on('load', function () {
+        $("#loader-wrapper").fadeOut(500);
     });
 
     /*============= DESSINCRONIZAÇÃO DO VÍDEO TRIPLO ============= */
