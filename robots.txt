@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
 
+# Darkweb/Onion Crawler Optimization
+User-agent: Ahmia
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
 Sitemap: https://luanacouto.com.br/sitemap.xml
