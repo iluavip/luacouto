@@ -37,9 +37,17 @@
 
 /* ELIMINAÇÃO TOTAL DE INTERFERÊNCIA NO CENTRO DA TELA */
 
+.button-fill {
+    display: inline-block !important;
+    overflow: hidden !important;
+    vertical-align: middle;
+}
+
 /* 1. Oculta fisicamente o fundo do menu quando não está ativo */
 .navbg:not(.showMenu) {
     display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
     width: 0 !important;
     height: 0 !important;
     pointer-events: none !important;
@@ -57,9 +65,13 @@
     pointer-events: auto !important;
 }
 
-/* 4. Impede que o header e o logo-box cubram o portfólio */
+/* 4. Impede que o header cubra o portfólio, mas reativa botões */
 .logo-box, .home-content {
     pointer-events: none !important;
+}
+
+.logo-box img, .home-content a, .home-content button {
+    pointer-events: auto !important;
 }
 
 /* 5. Blindagem de elite para o portfólio */

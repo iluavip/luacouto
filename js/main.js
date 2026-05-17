@@ -114,23 +114,32 @@ $(".simplefilter li").on("click", function () {
     $(".simplefilter li").removeClass("active");
     $(this).addClass("active");
 });
-var options = {
-    animationDuration: 0.6,
-    filter: "all",
-    callbacks: {
-        onFilteringStart: function () { },
-        onFilteringEnd: function () { }
-    },
-    delay: 0,
-    delayMode: "alternate",
-    easing: "ease-out",
-    layout: "packed",
-    selector: ".filtr-container",
-    setupControls: true,
-    gutterPixels: 0 // Garante alinhamento perfeito com o grid
-}
-var filterizd = $(".filtr-container").filterizr(options);
-filterizd.filterizr("setOptions", options);
+
+var filterizd;
+$(window).on('load', function () {
+    var options = {
+        animationDuration: 0.6,
+        filter: "all",
+        callbacks: {
+            onFilteringStart: function () { },
+            onFilteringEnd: function () { }
+        },
+        delay: 0,
+        delayMode: "alternate",
+        easing: "ease-out",
+        layout: "packed",
+        selector: ".filtr-container",
+        setupControls: true,
+        gutterPixels: 0
+    };
+    
+    filterizd = $(".filtr-container").filterizr(options);
+    
+    // Força um recálculo de layout após um pequeno delay para garantir renderização total
+    setTimeout(function() {
+        $(window).trigger('resize');
+    }, 500);
+});
 
 /*========= OWLCAROUSEL =========*/
 

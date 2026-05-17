@@ -283,6 +283,7 @@ button:active {
 
 /*----------------- BUTTON STYLE----------------- */
 .button {
+    display: inline-block;
     margin: 10px auto 0;
     padding: 14px 15px;
     border: none;
