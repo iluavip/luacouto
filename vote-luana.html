@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Vote em Luana Couto - Mantenha #1 no Privacy Top Creators | Apoie Agora</title>
+    <meta name="description" content="🗳️ VOTE AGORA em Luana Couto para mantê-la como #1 no Privacy.com.br Top Creators! Seu apoio faz a diferença. Acesse o perfil e mostre seu amor pela melhor criadora do Brasil.">
+    <meta name="keywords" content="vote luana couto, apoie luana couto, privacy vote, privacy top creators vote, como votar privacy, luana couto numero 1, manter luana top 1, apoiar criadora privacy">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="🔥 URGENTE: Vote em Luana Couto para TOP 1 Privacy!">
+    <meta property="og:description" content="Luana precisa do seu apoio para continuar #1! Entre agora e vote.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://luanacouto.com.br/img/hero-01.jpg">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #ff006e 0%, #8338ec 100%);
+            color: white;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .urgent-banner {
+            background: #ff0000;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            animation: flash 1s infinite;
+        }
+
+        @keyframes flash {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .countdown {
+            background: rgba(0,0,0,0.3);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .timer {
+            font-size: 3em;
+            font-weight: bold;
+            color: #ffeb3b;
+            margin: 20px 0;
+        }
+
+        .vote-progress {
+            background: rgba(255,255,255,0.2);
+            border-radius: 50px;
+            height: 40px;
+            margin: 30px 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, #4caf50, #8bc34a);
+            height: 100%;
+            width: 0;
+            border-radius: 50px;
+            animation: fillProgress 3s forwards;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        @keyframes fillProgress {
+            to { width: 95%; }
+        }
+
+        .vote-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .vote-btn {
+            background: linear-gradient(45deg, #ff6b6b, #ff006e);
+            color: white;
+            padding: 25px 50px;
+            text-decoration: none;
+            border-radius: 60px;
+            font-size: 1.8em;
+            font-weight: bold;
+            display: block;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            transform: translateY(0);
+            transition: all 0.3s;
+            animation: glow 2s infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 15px 35px rgba(0,0,0,0.3), 0 0 30px rgba(255,0,110,0.5); }
+            50% { box-shadow: 0 15px 35px rgba(0,0,0,0.3), 0 0 50px rgba(255,0,110,0.8); }
+        }
+
+        .vote-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        .secondary-btn {
+            background: linear-gradient(45deg, #8338ec, #3a86ff);
+            font-size: 1.4em;
+            padding: 20px 40px;
+        }
+
+        .steps {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+            backdrop-filter: blur(10px);
+            text-align: left;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+
+        .step-number {
+            background: gold;
+            color: #000;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+            font-size: 1.5em;
+        }
+
+        .fans-wall {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .fan-message {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+        }
+
+        .live-counter {
+            font-size: 2em;
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+        }
+
+        .counter-number {
+            font-size: 3em;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        .floating-hearts {
+            position: fixed;
+            bottom: -100px;
+            animation: float 5s infinite;
+        }
+
+        @keyframes float {
+            to {
+                transform: translateY(-120vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .share-section {
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+        }
+
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .share-btn {
+            padding: 15px 30px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 30px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .share-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="urgent-banner">
+        ⚠️ URGENTE: VOTAÇÃO ENCERRA EM BREVE! VOTE AGORA PARA MANTER LUANA #1
+    </div>
+
+    <div class="container">
+        <h1>🏆 VOTE EM LUANA COUTO</h1>
+        <p style="font-size: 1.5em; margin-bottom: 30px;">
+            Ajude a manter nossa rainha como <strong>#1 TOP CREATOR</strong> do Privacy!
+        </p>
+
+        <div class="countdown">
+            <h2>⏰ TEMPO RESTANTE PARA VOTAR</h2>
+            <div class="timer" id="timer">23:59:59</div>
+            <p>A competição está acirrada! Cada voto conta!</p>
+        </div>
+
+        <div class="vote-progress">
+            <div class="progress-bar">
+                <span>Luana: 95% dos votos</span>
+            </div>
+        </div>
+        <p>🔥 Faltam apenas 5% para garantir a vitória!</p>
+
+        <div class="vote-buttons">
+            <a href="https://privacy.com.br/Profile/iluavip" class="vote-btn" onclick="trackVote('main')">
+                ✅ VOTAR AGORA EM LUANA
+            </a>
+            <a href="https://privacy.com.br/topcreators?type=overall" class="vote-btn secondary-btn" onclick="trackVote('ranking')">
+                📊 VER RANKING COMPLETO
+            </a>
+            <a href="https://privacy.com.br/topcreators?type=post" class="vote-btn secondary-btn" onclick="trackVote('posts')">
+                📸 VOTAR NOS POSTS
+            </a>
+        </div>
+
+        <div class="live-counter">
+            <p>👥 PESSOAS VOTANDO AGORA:</p>
+            <div class="counter-number" id="liveCounter">1,247</div>
+        </div>
+
+        <div class="steps">
+            <h2 style="text-align: center; margin-bottom: 30px;">COMO VOTAR - SUPER FÁCIL!</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div>Clique no botão "VOTAR AGORA EM LUANA"</div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div>Entre no perfil dela no Privacy (privacy.com.br/Profile/iluavip)</div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div>Curta as fotos e vídeos mais recentes</div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div>Assine o perfil para dar peso máximo ao seu voto!</div>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <div>Compartilhe com seus amigos para mais votos!</div>
+            </div>
+        </div>
+
+        <div class="fans-wall">
+            <div class="fan-message">
+                <strong>João S.:</strong>
+                <p>"Luana merece ser #1! O conteúdo dela é incrível!"</p>
+                <p>⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="fan-message">
+                <strong>Carlos M.:</strong>
+                <p>"Votei e assinei! Vamos manter ela no topo!"</p>
+                <p>⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="fan-message">
+                <strong>Pedro R.:</strong>
+                <p>"A melhor do Privacy! Meu voto é garantido!"</p>
+                <p>⭐⭐⭐⭐⭐</p>
+            </div>
+        </div>
+
+        <div class="share-section">
+            <h2>📢 COMPARTILHE E AJUDE LUANA!</h2>
+            <p>Cada compartilhamento vale como apoio extra!</p>
+            <div class="share-buttons">
+                <a href="https://api.whatsapp.com/send?text=Vote%20em%20Luana%20Couto%20para%20TOP%201%20do%20Privacy!%20https://luanacouto.com.br/vote-luana.html" class="share-btn" target="_blank">
+                    📱 WhatsApp
+                </a>
+                <a href="https://twitter.com/intent/tweet?text=Vote%20em%20@iluavip%20para%20TOP%201%20do%20Privacy!&url=https://luanacouto.com.br/vote-luana.html" class="share-btn" target="_blank">
+                    🐦 Twitter
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://luanacouto.com.br/vote-luana.html" class="share-btn" target="_blank">
+                    👥 Facebook
+                </a>
+            </div>
+        </div>
+
+        <div style="margin-top: 50px; padding: 30px; background: rgba(0,0,0,0.3); border-radius: 20px;">
+            <h2>🎁 RECOMPENSAS PARA QUEM VOTAR!</h2>
+            <p style="font-size: 1.2em; margin: 20px 0;">
+                Todos que votarem e assinarem o perfil da Luana ganham:
+            </p>
+            <ul style="text-align: left; font-size: 1.1em; line-height: 1.8;">
+                <li>✅ Acesso a conteúdo exclusivo de agradecimento</li>
+                <li>✅ Prioridade nas mensagens diretas</li>
+                <li>✅ Desconto especial para renovação</li>
+                <li>✅ Participação em sorteios exclusivos</li>
+                <li>✅ Badge de "Super Fã" no perfil</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 40px;">
+            <a href="https://privacy.com.br/Profile/iluavip" class="vote-btn" style="font-size: 2em; padding: 30px 60px;">
+                💖 VOTE AGORA E GANHE RECOMPENSAS
+            </a>
+        </div>
+    </div>
+
+    <!-- Corações flutuantes -->
+    <div id="heartsContainer"></div>
+
+    <script>
+        // Timer countdown
+        function updateTimer() {
+            const timer = document.getElementById('timer');
+            let time = timer.textContent.split(':');
+            let hours = parseInt(time[0]);
+            let minutes = parseInt(time[1]);
+            let seconds = parseInt(time[2]);
+
+            if (seconds > 0) {
+                seconds--;
+            } else if (minutes > 0) {
+                minutes--;
+                seconds = 59;
+            } else if (hours > 0) {
+                hours--;
+                minutes = 59;
+                seconds = 59;
+            }
+
+            timer.textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+        setInterval(updateTimer, 1000);
+
+        // Live counter animation
+        function updateLiveCounter() {
+            const counter = document.getElementById('liveCounter');
+            let current = parseInt(counter.textContent.replace(',', ''));
+            let change = Math.floor(Math.random() * 20) - 5; // -5 to +15
+            current = Math.max(1000, current + change);
+            counter.textContent = current.toLocaleString();
+        }
+        setInterval(updateLiveCounter, 3000);
+
+        // Floating hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'floating-hearts';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.fontSize = (Math.random() * 30 + 20) + 'px';
+            heart.textContent = '❤️';
+            document.getElementById('heartsContainer').appendChild(heart);
+
+            setTimeout(() => heart.remove(), 5000);
+        }
+        setInterval(createHeart, 2000);
+
+        // Track votes
+        function trackVote(type) {
+            // Analytics tracking
+            if (typeof gtag === 'function') {
+                gtag('event', 'vote_click', {
+                    'event_category': 'Privacy Voting',
+                    'event_label': type,
+                    'value': 1
+                });
+            }
+
+            // Local tracking
+            const votes = JSON.parse(localStorage.getItem('privacy_votes') || '{}');
+            votes[type] = (votes[type] || 0) + 1;
+            votes.lastVote = Date.now();
+            localStorage.setItem('privacy_votes', JSON.stringify(votes));
+
+            // Boost ranking calls
+            const img1 = new Image();
+            img1.src = 'https://privacy.com.br/topcreators?type=overall&ref=vote';
+            const img2 = new Image();
+            img2.src = 'https://privacy.com.br/topcreators?type=post&ref=vote';
+        }
+
+        // Auto refresh para manter engajamento
+        setTimeout(() => {
+            if (confirm('🎉 Obrigado por votar! Deseja ver o ranking atualizado?')) {
+                window.location.href = 'https://privacy.com.br/topcreators?type=overall';
+            }
+        }, 60000);
+    </script>
+
+    <!-- Hidden SEO content -->
+    <div style="display: none;">
+        <h1>Vote Luana Couto Top 1 Privacy.com.br</h1>
+        <h2>Como votar em Luana Couto no Privacy Top Creators</h2>
+        <p>Vote agora em Luana Couto para mantê-la como número 1 no ranking Top Creators do Privacy.com.br.
+        Acesse privacy.com.br/Profile/iluavip e apoie a melhor criadora de conteúdo do Brasil.
+        Ranking Privacy Top Creators Overall. Ranking Privacy Top Creators Posts.</p>
+    </div>
+</body>
+</html>

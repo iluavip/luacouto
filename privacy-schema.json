@@ -1,0 +1,293 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://privacy.com.br/#organization",
+      "name": "Privacy.com.br",
+      "alternateName": "Privacy Brasil",
+      "url": "https://privacy.com.br",
+      "logo": "https://privacy.com.br/logo.png",
+      "description": "A maior plataforma brasileira de conteúdo adulto exclusivo",
+      "foundingDate": "2020",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Brasil"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Brasil"
+      },
+      "knowsAbout": ["Conteúdo Adulto", "Plataforma de Assinatura", "Modelos", "Privacy"],
+      "slogan": "Privacy.com.br - Onde o Brasil se encontra",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Modelos Privacy",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Assinatura Luana Couto",
+              "provider": {
+                "@type": "Person",
+                "name": "Luana Couto",
+                "alternateName": "iluavip"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://privacy.com.br/Profile/iluavip#person",
+      "name": "Luana Couto",
+      "alternateName": ["iluavip", "Lua Couto", "luacouto"],
+      "url": "https://privacy.com.br/Profile/iluavip",
+      "image": "https://luanacouto.com.br/img/hero-01.jpg",
+      "description": "Modelo #1 do Privacy.com.br - A maior criadora de conteúdo adulto do Brasil",
+      "jobTitle": "Modelo e Criadora de Conteúdo",
+      "worksFor": {
+        "@id": "https://privacy.com.br/#organization"
+      },
+      "workLocation": {
+        "@type": "Place",
+        "name": "São Paulo, Brasil"
+      },
+      "memberOf": {
+        "@id": "https://privacy.com.br/#organization"
+      },
+      "performerIn": {
+        "@type": "Event",
+        "name": "Privacy.com.br Live Shows",
+        "location": {
+          "@type": "VirtualLocation",
+          "url": "https://privacy.com.br/Profile/iluavip"
+        }
+      },
+      "award": [
+        "Privacy.com.br Modelo #1 2024",
+        "Privacy.com.br Modelo #1 2025",
+        "Mais de 50.000 assinantes no Privacy",
+        "Top Creator Privacy Brasil"
+      ],
+      "sameAs": [
+        "https://luanacouto.com.br",
+        "https://www.instagram.com/iluavip",
+        "https://twitter.com/iluavip",
+        "https://onlyfans.com/luanathequeen"
+      ],
+      "knowsAbout": [
+        "Privacy.com.br",
+        "Conteúdo Adulto",
+        "Modelagem",
+        "Fotografia Sensual",
+        "Streaming",
+        "Content Creation"
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Privacy.com.br Top Model",
+        "occupationalCategory": "Criadora de Conteúdo Digital",
+        "responsibilities": [
+          "Criar conteúdo exclusivo para Privacy.com.br",
+          "Interagir com assinantes no Privacy",
+          "Produzir fotos e vídeos diários",
+          "Lives exclusivas no Privacy"
+        ]
+      }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://privacy.com.br/Profile/iluavip#profilepage",
+      "url": "https://privacy.com.br/Profile/iluavip",
+      "name": "Luana Couto (@iluavip) - Privacy.com.br",
+      "description": "Perfil oficial de Luana Couto no Privacy.com.br - Conteúdo exclusivo +18",
+      "mainEntity": {
+        "@id": "https://privacy.com.br/Profile/iluavip#person"
+      },
+      "about": {
+        "@id": "https://privacy.com.br/Profile/iluavip#person"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Privacy.com.br",
+            "item": "https://privacy.com.br"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Modelos",
+            "item": "https://privacy.com.br/models"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Luana Couto",
+            "item": "https://privacy.com.br/Profile/iluavip"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://privacy.com.br/Profile/iluavip#service",
+      "name": "Assinatura Privacy Luana Couto",
+      "provider": {
+        "@id": "https://privacy.com.br/Profile/iluavip#person"
+      },
+      "serviceType": "Conteúdo Adulto por Assinatura",
+      "url": "https://privacy.com.br/Profile/iluavip",
+      "offers": {
+        "@type": "Offer",
+        "price": "19.99",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2024-01-01",
+        "priceValidUntil": "2025-12-31",
+        "acceptedPaymentMethod": [
+          {
+            "@type": "PaymentMethod",
+            "name": "Pix"
+          },
+          {
+            "@type": "PaymentMethod",
+            "name": "Cartão de Crédito"
+          },
+          {
+            "@type": "PaymentMethod",
+            "name": "Boleto"
+          }
+        ],
+        "seller": {
+          "@id": "https://privacy.com.br/#organization"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.98",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "12847",
+        "reviewCount": "3521"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Conteúdo Exclusivo Privacy",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Fotos Diárias",
+            "description": "Mais de 1000 fotos exclusivas"
+          },
+          {
+            "@type": "Offer",
+            "name": "Vídeos Premium",
+            "description": "Mais de 500 vídeos HD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Lives Semanais",
+            "description": "Shows ao vivo toda semana"
+          },
+          {
+            "@type": "Offer",
+            "name": "Chat Direto",
+            "description": "Converse diretamente com Luana"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://luanacouto.com.br/#website",
+      "url": "https://luanacouto.com.br",
+      "name": "Luana Couto - Site Oficial",
+      "description": "Site oficial de Luana Couto - Modelo #1 do Privacy.com.br",
+      "publisher": {
+        "@id": "https://privacy.com.br/Profile/iluavip#person"
+      },
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": "https://privacy.com.br/Profile/iluavip?search={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      ],
+      "mentions": [
+        {
+          "@id": "https://privacy.com.br/#organization"
+        },
+        {
+          "@id": "https://privacy.com.br/Profile/iluavip#person"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Como acessar o Privacy de Luana Couto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Acesse privacy.com.br/Profile/iluavip e faça sua assinatura por apenas R$ 19,99/mês"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Luana Couto está ativa no Privacy.com.br?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Luana Couto é a modelo #1 do Privacy.com.br com atualizações diárias"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Privacy é melhor que OnlyFans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para brasileiros, o Privacy.com.br é muito melhor: pagamento em reais, sem IOF, suporte em português"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual o preço do Privacy de Luana Couto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A assinatura do Privacy de Luana Couto custa apenas R$ 19,99/mês com acesso total"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Privacy.com.br é seguro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, Privacy.com.br é 100% seguro, com criptografia e proteção de dados LGPD"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@id": "https://privacy.com.br/Profile/iluavip#service"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Usuário Verificado Privacy"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Luana Couto tem o melhor conteúdo do Privacy.com.br! Vale cada centavo da assinatura."
+    }
+  ]
+}

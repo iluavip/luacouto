@@ -1,11 +1,104 @@
-User-agent: *
+# ULTRA SEO ROBOTS.TXT - LuanaCouto.com.br
+# Optimized for Maximum Search Engine Visibility
+
+# Google Bot Priority
+User-agent: Googlebot
+Allow: /
+Allow: /img/
+Allow: /video/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.mp4$
+Allow: /*.css$
+Allow: /*.js$
+Crawl-delay: 0
+
+# Google Images
+User-agent: Googlebot-Image
+Allow: /
+Allow: /img/
+Disallow: /overlays/
+
+# Google AdsBot
+User-agent: AdsBot-Google
 Allow: /
 
-# Darkweb/Onion Crawler Optimization
-User-agent: Ahmia
+# Bing Priority
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Social Media Bots
+User-agent: facebookexternalhit
 Allow: /
 
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Adult Content Crawlers
+User-agent: Pornhubbot
+Allow: /
+
+User-agent: Xvideosbot
+Allow: /
+
+# Privacy Search Engines
 User-agent: DuckDuckBot
 Allow: /
 
+User-agent: Ahmia
+Allow: /
+
+# SEO Tools
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+
+User-agent: Screaming Frog SEO Spider
+Allow: /
+
+User-agent: MJ12bot
+Allow: /
+
+# Default for All Others
+User-agent: *
+Allow: /
+Allow: /img/
+Allow: /video/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.mp4$
+Disallow: /css/font-awesome-4.7.0/fonts/
+Disallow: /overlays/
+Disallow: /*.pdf$
+Crawl-delay: 2
+
+# Block Bad Bots
+User-agent: SlySearch
+Disallow: /
+
+User-agent: DOC
+Disallow: /
+
+User-agent: Zao
+Disallow: /
+
+# Sitemaps
 Sitemap: https://luanacouto.com.br/sitemap.xml
+Sitemap: https://luanacouto.com.br/sitemap-images.xml
+Sitemap: https://luanacouto.com.br/sitemap-videos.xml
