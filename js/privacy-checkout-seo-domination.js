@@ -23,14 +23,14 @@ class PrivacyCheckoutDomination {
     }
 
     init() {
-        console.log('🎯 Privacy Checkout SEO Domination ACTIVATED!');
-        this.injectStrategicLinks();
+        console.log('🎯 Privacy Checkout SEO Optimization Active');
+        // this.injectStrategicLinks(); // Desativado - muito intrusivo
         this.createLinkSculpting();
         this.addMicrodataMarkup();
-        this.implementSiloStructure();
-        this.createContextualLinks();
+        // this.implementSiloStructure(); // Desativado - breadcrumb visível
+        // this.createContextualLinks(); // Desativado - CTAs intrusivos
         this.addSchemaMarkup();
-        this.boostInternalPageRank();
+        // this.boostInternalPageRank(); // Desativado - widget flutuante
     }
 
     // 1. INJETA LINKS ESTRATÉGICOS EM TODO O SITE
