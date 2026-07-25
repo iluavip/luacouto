@@ -30,20 +30,68 @@ $(function () {
         $("#loader-wrapper").fadeOut(500);
     });
 
-    /*============= DESSINCRONIZAÇÃO DO VÍDEO TRIPLO ============= */
-    var vTop = document.querySelector(".video-top");
-    var vMid = document.querySelector(".video-mid");
-    var vBottom = document.querySelector(".video-bottom");
+    /*============= VÍDEO TRIPLO — CARREGAMENTO INTELIGENTE =============
+       - Não baixa o vídeo durante a abertura da página (preload="none" no HTML);
+         só inicia depois que o navegador está ocioso, para a página abrir rápido.
+       - Mantém a dessincronização (offsets de tempo) para parecerem 3 vídeos.
+       - Pausa os 3 quando o hero sai da tela (economiza CPU/bateria no mobile)
+         e retoma quando volta. */
+    var bgVideos = [
+        { el: document.querySelector(".video-top"), offset: 0 },
+        { el: document.querySelector(".video-mid"), offset: 5 },   // começa aos 5s
+        { el: document.querySelector(".video-bottom"), offset: 9 } // começa aos 9s (clipe tem ~9,5s)
+    ].filter(function (v) { return v.el; });
 
-    if (vTop && vMid && vBottom) {
-        // Define tempos de início diferentes para parecerem vídeos distintos
-        vMid.currentTime = 5;    // Começa aos 5 segundos
-        vBottom.currentTime = 10; // Começa aos 10 segundos
+    if (bgVideos.length) {
+        var videosStarted = false;
 
-        // Garante que todos comecem a rodar
-        vTop.play();
-        vMid.play();
-        vBottom.play();
+        function startBgVideo(v) {
+            var play = function () {
+                if (v.offset) { try { v.el.currentTime = v.offset; } catch (e) {} }
+                var p = v.el.play();
+                if (p && p.catch) { p.catch(function () {}); }
+            };
+            if (v.el.readyState >= 2) { play(); }
+            else { v.el.addEventListener("loadeddata", play, { once: true }); }
+            v.el.load(); // dispara o download só agora
+        }
+
+        function startAllBgVideos() {
+            if (videosStarted) { return; }
+            videosStarted = true;
+            bgVideos.forEach(startBgVideo);
+        }
+
+        // Só começa a baixar/tocar quando o navegador estiver ocioso após a abertura
+        function deferStart() {
+            if (window.requestIdleCallback) {
+                window.requestIdleCallback(startAllBgVideos, { timeout: 1500 });
+            } else {
+                setTimeout(startAllBgVideos, 300);
+            }
+        }
+
+        // Pausa quando o hero sai da tela; retoma quando volta
+        var heroArea = document.querySelector(".video-container") || document.querySelector(".home");
+        if ("IntersectionObserver" in window && heroArea) {
+            var io = new IntersectionObserver(function (entries) {
+                var visible = entries[0] && entries[0].isIntersecting;
+                if (visible) {
+                    if (!videosStarted) { deferStart(); }
+                    else {
+                        bgVideos.forEach(function (v) {
+                            var p = v.el.play();
+                            if (p && p.catch) { p.catch(function () {}); }
+                        });
+                    }
+                } else {
+                    bgVideos.forEach(function (v) { v.el.pause(); });
+                }
+            }, { threshold: 0.1 });
+            io.observe(heroArea);
+        } else {
+            deferStart();
+        }
     }
 
     /*============= SCROLLIT ============= */
