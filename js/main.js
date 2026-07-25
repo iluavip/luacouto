@@ -62,35 +62,31 @@ $(function () {
             bgVideos.forEach(startBgVideo);
         }
 
-        // Só começa a baixar/tocar quando o navegador estiver ocioso após a abertura
-        function deferStart() {
-            if (window.requestIdleCallback) {
-                window.requestIdleCallback(startAllBgVideos, { timeout: 1500 });
-            } else {
-                setTimeout(startAllBgVideos, 300);
-            }
+        // Inicia sempre assim que o navegador ficar ocioso após a abertura
+        // (não depende do observer para o 1º play, para ser robusto).
+        if (window.requestIdleCallback) {
+            window.requestIdleCallback(startAllBgVideos, { timeout: 1500 });
+        } else {
+            setTimeout(startAllBgVideos, 300);
         }
 
-        // Pausa quando o hero sai da tela; retoma quando volta
+        // Observer apenas para PAUSAR quando o hero sai da tela e RETOMAR quando
+        // volta (economiza CPU/bateria no mobile). Não controla o 1º play.
         var heroArea = document.querySelector(".video-container") || document.querySelector(".home");
         if ("IntersectionObserver" in window && heroArea) {
             var io = new IntersectionObserver(function (entries) {
+                if (!videosStarted) { return; } // deixa o start inicial acontecer primeiro
                 var visible = entries[0] && entries[0].isIntersecting;
-                if (visible) {
-                    if (!videosStarted) { deferStart(); }
-                    else {
-                        bgVideos.forEach(function (v) {
-                            var p = v.el.play();
-                            if (p && p.catch) { p.catch(function () {}); }
-                        });
+                bgVideos.forEach(function (v) {
+                    if (visible) {
+                        var p = v.el.play();
+                        if (p && p.catch) { p.catch(function () {}); }
+                    } else {
+                        v.el.pause();
                     }
-                } else {
-                    bgVideos.forEach(function (v) { v.el.pause(); });
-                }
-            }, { threshold: 0.1 });
+                });
+            }, { threshold: 0.01 });
             io.observe(heroArea);
-        } else {
-            deferStart();
         }
     }
 
