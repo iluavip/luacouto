@@ -99,6 +99,6 @@ User-agent: Zao
 Disallow: /
 
 # Sitemaps
-Sitemap: https://luanacouto.com.br/sitemap.xml
-Sitemap: https://luanacouto.com.br/sitemap-images.xml
-Sitemap: https://luanacouto.com.br/sitemap-videos.xml
+Sitemap: https://luacouto.com.br/sitemap.xml
+Sitemap: https://luacouto.com.br/sitemap-images.xml
+Sitemap: https://luacouto.com.br/sitemap-videos.xml
