@@ -31,8 +31,6 @@ $(function () {
     });
 
     /*============= VÍDEO TRIPLO — CARREGAMENTO INTELIGENTE =============
-       - Não baixa o vídeo durante a abertura da página (preload="none" no HTML);
-         só inicia depois que o navegador está ocioso, para a página abrir rápido.
        - Mantém a dessincronização (offsets de tempo) para parecerem 3 vídeos.
        - Pausa os 3 quando o hero sai da tela (economiza CPU/bateria no mobile)
          e retoma quando volta. */
@@ -43,73 +41,45 @@ $(function () {
     ].filter(function (v) { return v.el; });
 
     if (bgVideos.length) {
-        var videosStarted = false;
-
-        // No celular usa uma versão leve (540x960): 3 decodificações simultâneas
-        // em 1072x1904 travam/falham em muitos aparelhos.
-        var isMobile = window.matchMedia && window.matchMedia("(max-width: 991px)").matches;
-        var bgSrc = isMobile ? "video/Apresentacao-mobile.mp4" : "video/Apresentacao.mp4";
-
+        // O autoplay é NATIVO (atributos autoplay/muted/playsinline no HTML e
+        // <source media> escolhendo a versão leve no celular). O JS só aplica
+        // os offsets e garante a retomada em casos de bloqueio/restauração.
         function tryPlay(v) {
+            if (!v.el.paused) { return; }
             var p = v.el.play();
             if (p && p.catch) { p.catch(function () {}); }
         }
 
-        function startBgVideo(v) {
-            // Garante as flags exigidas para autoplay no iOS/Android.
+        function applyOffset(v) {
+            if (!v.offset || v.applied) { return; }
+            v.applied = true;
+            try { v.el.currentTime = Math.min(v.offset, v.el.duration - 0.2); } catch (e) {}
+        }
+
+        bgVideos.forEach(function (v) {
             v.el.muted = true;
             v.el.defaultMuted = true;
             v.el.playsInline = true;
-            v.el.setAttribute("muted", "");
-            v.el.setAttribute("playsinline", "");
-            v.el.setAttribute("webkit-playsinline", "");
-
-            // Aplica o offset assim que a duração for conhecida.
-            v.el.addEventListener("loadedmetadata", function () {
-                if (v.offset) { try { v.el.currentTime = Math.min(v.offset, v.el.duration - 0.2); } catch (e) {} }
-            }, { once: true });
-
-            // Tenta de novo quando houver dados suficientes (alguns Android
-            // rejeitam o play() feito antes do buffer).
-            v.el.addEventListener("canplay", function () {
-                if (v.el.paused) { tryPlay(v); }
-            }, { once: true });
-
-            v.el.autoplay = true;
-            v.el.preload = "auto";
-            v.el.src = bgSrc;
-            v.el.load();
-            // Chama play() direto: o iOS Safari não baixa dados (nem dispara
-            // "loadeddata") com preload="none" até que play() seja chamado.
+            if (v.el.readyState >= 1) { applyOffset(v); }
+            else { v.el.addEventListener("loadedmetadata", function () { applyOffset(v); }, { once: true }); }
+            v.el.addEventListener("canplay", function () { tryPlay(v); }, { once: true });
             tryPlay(v);
-        }
-
-        function resumeAll() {
-            if (!videosStarted) { startAllBgVideos(); return; }
-            bgVideos.forEach(function (v) { if (v.el.paused) { tryPlay(v); } });
-        }
-
-        // Ao reabrir o link, o celular costuma restaurar a página da memória
-        // (bfcache / aba em segundo plano) sem rodar o script de novo e com os
-        // vídeos pausados. Retoma nesses casos.
-        window.addEventListener("pageshow", function (e) {
-            if (e.persisted) { resumeAll(); }
         });
+
+        function resumeAll() { bgVideos.forEach(tryPlay); }
+
+        // Reabertura do link: o celular pode restaurar a página da memória
+        // (bfcache / aba em segundo plano) com os vídeos pausados.
+        window.addEventListener("pageshow", resumeAll);
         document.addEventListener("visibilitychange", function () {
             if (document.visibilityState === "visible") { resumeAll(); }
         });
+        // Rede de segurança: tenta de novo algumas vezes nos primeiros segundos.
+        [500, 1500, 3000].forEach(function (ms) { setTimeout(resumeAll, ms); });
 
-        function startAllBgVideos() {
-            if (videosStarted) { return; }
-            videosStarted = true;
-            bgVideos.forEach(startBgVideo);
-        }
-
-        // Fallback: se o autoplay foi bloqueado (ex.: modo economia de energia),
-        // inicia no primeiro toque/rolagem do usuário.
+        // Último recurso: primeiro toque/rolagem do usuário.
         var resumeOnGesture = function () {
-            startAllBgVideos();
-            bgVideos.forEach(function (v) { if (v.el.paused) { tryPlay(v); } });
+            resumeAll();
             ["touchstart", "click", "scroll"].forEach(function (evt) {
                 window.removeEventListener(evt, resumeOnGesture);
             });
@@ -118,28 +88,13 @@ $(function () {
             window.addEventListener(evt, resumeOnGesture, { passive: true });
         });
 
-        // Inicia sempre assim que o navegador ficar ocioso após a abertura
-        // (não depende do observer para o 1º play, para ser robusto).
-        if (window.requestIdleCallback) {
-            window.requestIdleCallback(startAllBgVideos, { timeout: 1500 });
-        } else {
-            setTimeout(startAllBgVideos, 300);
-        }
-
-        // Observer apenas para PAUSAR quando o hero sai da tela e RETOMAR quando
-        // volta (economiza CPU/bateria no mobile). Não controla o 1º play.
+        // Pausa quando o hero sai da tela e retoma quando volta.
         var heroArea = document.querySelector(".video-container") || document.querySelector(".home");
         if ("IntersectionObserver" in window && heroArea) {
             var io = new IntersectionObserver(function (entries) {
-                if (!videosStarted) { return; } // deixa o start inicial acontecer primeiro
                 var visible = entries[0] && entries[0].isIntersecting;
                 bgVideos.forEach(function (v) {
-                    if (visible) {
-                        var p = v.el.play();
-                        if (p && p.catch) { p.catch(function () {}); }
-                    } else {
-                        v.el.pause();
-                    }
+                    if (visible) { tryPlay(v); } else { v.el.pause(); }
                 });
             }, { threshold: 0.01 });
             io.observe(heroArea);
