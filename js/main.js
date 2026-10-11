@@ -69,12 +69,35 @@ $(function () {
                 if (v.offset) { try { v.el.currentTime = Math.min(v.offset, v.el.duration - 0.2); } catch (e) {} }
             }, { once: true });
 
+            // Tenta de novo quando houver dados suficientes (alguns Android
+            // rejeitam o play() feito antes do buffer).
+            v.el.addEventListener("canplay", function () {
+                if (v.el.paused) { tryPlay(v); }
+            }, { once: true });
+
+            v.el.autoplay = true;
+            v.el.preload = "auto";
             v.el.src = bgSrc;
             v.el.load();
             // Chama play() direto: o iOS Safari não baixa dados (nem dispara
             // "loadeddata") com preload="none" até que play() seja chamado.
             tryPlay(v);
         }
+
+        function resumeAll() {
+            if (!videosStarted) { startAllBgVideos(); return; }
+            bgVideos.forEach(function (v) { if (v.el.paused) { tryPlay(v); } });
+        }
+
+        // Ao reabrir o link, o celular costuma restaurar a página da memória
+        // (bfcache / aba em segundo plano) sem rodar o script de novo e com os
+        // vídeos pausados. Retoma nesses casos.
+        window.addEventListener("pageshow", function (e) {
+            if (e.persisted) { resumeAll(); }
+        });
+        document.addEventListener("visibilitychange", function () {
+            if (document.visibilityState === "visible") { resumeAll(); }
+        });
 
         function startAllBgVideos() {
             if (videosStarted) { return; }
