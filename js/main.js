@@ -45,15 +45,35 @@ $(function () {
     if (bgVideos.length) {
         var videosStarted = false;
 
+        // No celular usa uma versão leve (540x960): 3 decodificações simultâneas
+        // em 1072x1904 travam/falham em muitos aparelhos.
+        var isMobile = window.matchMedia && window.matchMedia("(max-width: 991px)").matches;
+        var bgSrc = isMobile ? "video/Apresentacao-mobile.mp4" : "video/Apresentacao.mp4";
+
+        function tryPlay(v) {
+            var p = v.el.play();
+            if (p && p.catch) { p.catch(function () {}); }
+        }
+
         function startBgVideo(v) {
-            var play = function () {
-                if (v.offset) { try { v.el.currentTime = v.offset; } catch (e) {} }
-                var p = v.el.play();
-                if (p && p.catch) { p.catch(function () {}); }
-            };
-            if (v.el.readyState >= 2) { play(); }
-            else { v.el.addEventListener("loadeddata", play, { once: true }); }
-            v.el.load(); // dispara o download só agora
+            // Garante as flags exigidas para autoplay no iOS/Android.
+            v.el.muted = true;
+            v.el.defaultMuted = true;
+            v.el.playsInline = true;
+            v.el.setAttribute("muted", "");
+            v.el.setAttribute("playsinline", "");
+            v.el.setAttribute("webkit-playsinline", "");
+
+            // Aplica o offset assim que a duração for conhecida.
+            v.el.addEventListener("loadedmetadata", function () {
+                if (v.offset) { try { v.el.currentTime = Math.min(v.offset, v.el.duration - 0.2); } catch (e) {} }
+            }, { once: true });
+
+            v.el.src = bgSrc;
+            v.el.load();
+            // Chama play() direto: o iOS Safari não baixa dados (nem dispara
+            // "loadeddata") com preload="none" até que play() seja chamado.
+            tryPlay(v);
         }
 
         function startAllBgVideos() {
@@ -61,6 +81,19 @@ $(function () {
             videosStarted = true;
             bgVideos.forEach(startBgVideo);
         }
+
+        // Fallback: se o autoplay foi bloqueado (ex.: modo economia de energia),
+        // inicia no primeiro toque/rolagem do usuário.
+        var resumeOnGesture = function () {
+            startAllBgVideos();
+            bgVideos.forEach(function (v) { if (v.el.paused) { tryPlay(v); } });
+            ["touchstart", "click", "scroll"].forEach(function (evt) {
+                window.removeEventListener(evt, resumeOnGesture);
+            });
+        };
+        ["touchstart", "click", "scroll"].forEach(function (evt) {
+            window.addEventListener(evt, resumeOnGesture, { passive: true });
+        });
 
         // Inicia sempre assim que o navegador ficar ocioso após a abertura
         // (não depende do observer para o 1º play, para ser robusto).
