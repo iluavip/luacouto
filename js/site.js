@@ -548,6 +548,34 @@
         });
     });
 
+    /*============= SUGESTÃO DE IDIOMA =============
+       Mostra "This site is also available in English" para quem tem o navegador
+       em outro idioma (e o inverso na versão em inglês). Não redireciona:
+       a escolha é do visitante. Fechar guarda a preferência no navegador. */
+    var hint = $("[data-lang-hint]");
+    if (hint) {
+        var target = hint.getAttribute("data-lang-hint");
+        var langs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ""])
+            .map(function (l) { return String(l).toLowerCase(); });
+        var prefersPt = langs.some(function (l) { return l.indexOf("pt") === 0; });
+        var wants = target === "en" ? !prefersPt : langs[0] && langs[0].indexOf("pt") === 0;
+        var dismissed = false;
+        try { dismissed = localStorage.getItem("langHintDismissed") === "1"; } catch (e) {}
+        if (wants && !dismissed) {
+            hint.hidden = false;
+            setTimeout(function () { hint.classList.add("is-visible"); }, reduceMotion ? 0 : 1800);
+            var closeHint = function () {
+                hint.classList.remove("is-visible");
+                try { localStorage.setItem("langHintDismissed", "1"); } catch (e) {}
+                setTimeout(function () { hint.hidden = true; }, 500);
+            };
+            $(".lang-hint-close", hint).addEventListener("click", closeHint);
+            $("a", hint).addEventListener("click", function () {
+                try { localStorage.setItem("langHintDismissed", "1"); } catch (e) {}
+            });
+        }
+    }
+
     /*============= ANO NO RODAPÉ ============= */
     $$("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();
