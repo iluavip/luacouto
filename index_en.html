@@ -86,7 +86,7 @@
     <meta property="og:site_name" content="Luana Couto | iluavip">
     <meta property="article:author" content="Luana Couto">
     <meta name="twitter:label1" content="Experiência">
-    <meta name="twitter:data1" content="+4 Anos">
+    <meta name="twitter:data1" content="+6 Years">
     <meta name="twitter:label2" content="Nicho">
     <meta name="twitter:data2" content="Modelo Sensual">
 
@@ -229,15 +229,20 @@
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=2">
 
     <script>document.documentElement.classList.add('js');</script>
+    <script>/* começa a baixar o vídeo do hero o quanto antes (1 download para as 3 colunas; ver js/site.js) */window.__heroVideo=(window.fetch&&location.protocol!=='file:')?fetch('video/Apresentacao-mobile.mp4',{priority:'high'}).then(function(r){return r.ok?r.blob():Promise.reject(r.status)}):null;window.__heroVideo&&window.__heroVideo.catch(function(){});</script>
 
     <!-- FONTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600;700&display=swap">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600;700&display=swap"></noscript>
 
     <!-- ESTILO -->
-    <link rel="preload" as="image" href="img/hero-poster-mobile-top.webp">
-    <link rel="stylesheet" href="css/site.css?v=20261101e">
+    <link rel="preload" as="image" href="img/hero-poster-mobile-top.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="img/hero-poster-mobile-mid.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="img/hero-poster-mobile-bottom.webp" fetchpriority="high">
+    <link rel="stylesheet" href="css/site.css?v=20261101m">
 
 </head>
 
@@ -309,9 +314,9 @@
         <!-- ====== HERO ====== -->
         <section class="hero" id="home">
             <div class="hero-media" aria-hidden="true">
-                <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="bg-video video-top" poster="img/hero-poster-mobile-top.webp"><source src="video/Apresentacao-mobile.mp4" type="video/mp4"></video>
-                <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="bg-video video-mid" poster="img/hero-poster-mobile-mid.webp"><source src="video/Apresentacao-mobile.mp4#t=5" type="video/mp4"></video>
-                <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="bg-video video-bottom" poster="img/hero-poster-mobile-bottom.webp"><source src="video/Apresentacao-mobile.mp4#t=9" type="video/mp4"></video>
+                <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="bg-video video-top" poster="img/hero-poster-mobile-top.webp" data-src="video/Apresentacao-mobile.mp4"></video>
+                <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="bg-video video-mid" poster="img/hero-poster-mobile-mid.webp" data-src="video/Apresentacao-mobile.mp4"></video>
+                <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="bg-video video-bottom" poster="img/hero-poster-mobile-bottom.webp" data-src="video/Apresentacao-mobile.mp4"></video>
             </div>
 
             <div class="container hero-content">
@@ -335,7 +340,7 @@
                 <div class="hero-stats">
                     <div class="hero-stat"><strong data-count="97" data-suffix="M+">97M+</strong><span>Views</span></div>
                     <div class="hero-stat"><strong data-count="146" data-suffix="K+">146K+</strong><span>Followers</span></div>
-                    <div class="hero-stat"><strong data-count="4" data-prefix="+">+4</strong><span>Years in the industry</span></div>
+                    <div class="hero-stat"><strong data-count="6" data-prefix="+">+6</strong><span>Years in the industry</span></div>
                 </div>
             </div>
 
@@ -359,11 +364,11 @@
             <div class="container about-grid">
                 <div class="about-copy about-text">
                     <span class="eyebrow" data-reveal>The model</span>
-                    <h2 class="title" data-split-words>+4 years of <em>experience</em> as a model</h2>
+                    <h2 class="title" data-split-words>+6 years of <em>experience</em> as a model</h2>
                     <p class="lead" data-reveal style="--d:2">A Brazilian model and content creator, Luana Couto has built a solid career that blends sensuality, elegance and a close connection with her audience, with a presence on the leading platforms in Brazil and around the world.</p>
 
                     <div class="about-facts">
-                        <div class="about-fact" data-reveal style="--d:3"><strong data-count="4" data-prefix="+">+4</strong><span>Years</span></div>
+                        <div class="about-fact" data-reveal style="--d:3"><strong data-count="6" data-prefix="+">+6</strong><span>Years</span></div>
                         <div class="about-fact" data-reveal style="--d:4"><strong data-count="9">9</strong><span>Platforms</span></div>
                         <div class="about-fact" data-reveal style="--d:5"><strong data-count="97" data-suffix="M+">97M+</strong><span>Views</span></div>
                     </div>
@@ -732,10 +737,10 @@
         <span class="lb-count"></span>
     </div>
 
-    <script src="js/site.js?v=20261101e" defer></script>
+    <script src="js/site.js?v=20261101m" defer></script>
 
     <!-- Instagram Stats -->
-    <script src="js/reset-instagram-stats.js?v=20261101e"></script>
+    <script src="js/reset-instagram-stats.js?v=20261101m"></script>
 
 
     <!-- SEO Authority Section (Subtle but Powerful for Crawlers) -->

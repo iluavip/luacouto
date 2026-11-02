@@ -69,9 +69,34 @@
             v.el.addEventListener("loadedmetadata", function () { applyOffset(v); });
             v.el.addEventListener("emptied", function () { v.applied = false; });
             v.el.addEventListener("canplay", function () { tryPlay(v); });
-            if (v.el.readyState >= 1) { applyOffset(v); }
-            tryPlay(v);
         });
+
+        // UM download para as três colunas: baixa o vídeo uma única vez para a
+        // memória (Blob) e entrega a mesma cópia às três, cada uma no seu ponto
+        // de partida — buscar um trecho na memória é instantâneo. O Chrome não
+        // reaproveita download de vídeo entre elementos: sem isto o celular
+        // baixava o arquivo 3x e, em rede lenta, as colunas 2 e 3 demoravam e
+        // acabavam sincronizadas. Até o vídeo chegar, cada coluna mostra o seu
+        // quadro certo (poster de 0s, 5s e 9s). Em file:// ou se o download
+        // falhar, cai no carregamento direto.
+        var videoSrc = bgVideos[0].el.getAttribute("data-src");
+        var attach = function (url, isBlob) {
+            bgVideos.forEach(function (v) {
+                v.applied = false;
+                v.el.src = url + (!isBlob && v.offset ? "#t=" + v.offset : "");
+                tryPlay(v);
+            });
+        };
+        if (videoSrc) {
+            if (window.fetch && window.URL && URL.createObjectURL && location.protocol !== "file:") {
+                // o download já foi iniciado no <head> (window.__heroVideo)
+                (window.__heroVideo || fetch(videoSrc).then(function (r) { return r.ok ? r.blob() : Promise.reject(r.status); }))
+                    .then(function (blob) { attach(URL.createObjectURL(blob), true); })
+                    .catch(function () { attach(videoSrc, false); });
+            } else {
+                attach(videoSrc, false);
+            }
+        }
 
         var resumeAll = function () { bgVideos.forEach(tryPlay); };
 
