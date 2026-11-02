@@ -229,7 +229,6 @@
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=2">
 
     <script>document.documentElement.classList.add('js');</script>
-    <script>/* começa a baixar o vídeo do hero o quanto antes (1 download para as 3 colunas; ver js/site.js) */window.__heroVideo=(window.fetch&&location.protocol!=='file:')?fetch('video/Apresentacao-mobile.mp4',{priority:'high'}).then(function(r){return r.ok?r.blob():Promise.reject(r.status)}):null;window.__heroVideo&&window.__heroVideo.catch(function(){});</script>
 
     <!-- FONTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -242,7 +241,7 @@
     <link rel="preload" as="image" href="img/hero-poster-mobile-top.webp" fetchpriority="high">
     <link rel="preload" as="image" href="img/hero-poster-mobile-mid.webp" fetchpriority="high">
     <link rel="preload" as="image" href="img/hero-poster-mobile-bottom.webp" fetchpriority="high">
-    <link rel="stylesheet" href="css/site.css?v=20261101o">
+    <link rel="stylesheet" href="css/site.css?v=20261102a">
 
 </head>
 
@@ -314,9 +313,9 @@
         <!-- ====== HERO ====== -->
         <section class="hero" id="home">
             <div class="hero-media" aria-hidden="true">
-                <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="bg-video video-top" poster="img/hero-poster-mobile-top.webp" data-src="video/Apresentacao-mobile.mp4"></video>
-                <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="bg-video video-mid" poster="img/hero-poster-mobile-mid.webp" data-src="video/Apresentacao-mobile.mp4"></video>
-                <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="bg-video video-bottom" poster="img/hero-poster-mobile-bottom.webp" data-src="video/Apresentacao-mobile.mp4"></video>
+                <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="bg-video video-top" poster="img/hero-poster-mobile-top.webp"><source src="video/Apresentacao-mobile.mp4" type="video/mp4"></video>
+                <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="bg-video video-mid" poster="img/hero-poster-mobile-mid.webp"><source src="video/Apresentacao-mobile.mp4#t=5" type="video/mp4"></video>
+                <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="bg-video video-bottom" poster="img/hero-poster-mobile-bottom.webp"><source src="video/Apresentacao-mobile.mp4#t=9" type="video/mp4"></video>
             </div>
 
             <div class="container hero-content">
@@ -744,10 +743,10 @@
         <span class="lb-count"></span>
     </div>
 
-    <script src="js/site.js?v=20261101o" defer></script>
+    <script src="js/site.js?v=20261102a" defer></script>
 
     <!-- Instagram Stats -->
-    <script src="js/reset-instagram-stats.js?v=20261101o"></script>
+    <script src="js/reset-instagram-stats.js?v=20261102a"></script>
 
 
     <!-- SEO Authority Section (Subtle but Powerful for Crawlers) -->

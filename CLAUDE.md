@@ -56,7 +56,7 @@ npx http-server
 ## Important Notes
 
 - Legacy pages use multiple jQuery plugins loaded via CDN and local files; the main pages have no third-party JS besides GA4
-- Hero video: the 3 columns are desynchronized on purpose (start at 0s/5s/9s). On the main pages the video is downloaded ONCE (fetch started inline in <head> as `window.__heroVideo`, then shared as a Blob URL by site.js) — Chrome would otherwise download it 3x. Over file:// it falls back to direct `src` + `#t=` fragments. Posters `img/hero-poster-mobile-*.webp` are the matching frames.
+- Hero video: the 3 columns are desynchronized on purpose (start at 0s/5s/9s via `#t=5`/`#t=9` in the <source>). Keep the <source> tags in the HTML: iOS Safari only autoplays when the video is declared natively — injecting src via JS (e.g. a shared Blob to download once) made iPhones wait for a touch/scroll. Posters `img/hero-poster-mobile-*.webp` are the matching frames.
 - `index.html` and `index_en.html` share the same markup; when changing one, mirror the change in the other
 - SEO is heavily optimized with multiple schema.org structured data blocks
 - The .gitignore file is UTF-16 encoded (should be converted to UTF-8 if editing)
