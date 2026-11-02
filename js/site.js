@@ -18,6 +18,7 @@
         if (!preloader || preloader.classList.contains("is-done")) { return; }
         preloader.classList.add("is-done");
         root.classList.add("is-loaded");
+        $$(".bg-video").forEach(function (el) { var p = el.play(); if (p && p.catch) { p.catch(function () {}); } });
     }
     if (preloader) {
         // Sai assim que o 1º vídeo do hero estiver tocando (ou a página carregar),
@@ -106,10 +107,76 @@
         if ("IntersectionObserver" in window && heroArea) {
             new IntersectionObserver(function (entries) {
                 var visible = entries[0] && entries[0].isIntersecting;
+                heroVisible = visible;
                 bgVideos.forEach(function (v) {
                     if (visible) { tryPlay(v); } else { v.el.pause(); }
                 });
             }, { threshold: 0.01 }).observe(heroArea);
+        }
+
+        // VIGIA DO AUTOPLAY (celular). Alguns celulares — sobretudo o Safari do
+        // iPhone — marcam o vídeo como "tocando" mas não começam de fato até a
+        // página rolar ou receber um toque. Durante os primeiros segundos,
+        // conferimos se cada vídeo está AVANÇANDO de verdade; se não estiver,
+        // pedimos play de novo (sem depender do estado "paused") e, como último
+        // recurso, fazemos uma rolagem invisível de 1px, que força o Safari a
+        // reavaliar a visibilidade do vídeo.
+        var heroVisible = true, nudged = false, ticks = 0, okTicks = 0;
+        var forcePlay = function (v) {
+            var p = v.el.play();
+            if (p && p.catch) { p.catch(function () {}); }
+        };
+        var nudgeScroll = function () {
+            if (nudged || window.pageYOffset > 2) { return; }
+            nudged = true;
+            // 1px por ~150 ms: rápido demais e o navegador "cancela" a rolagem
+            // (nem dispara o evento); assim ela é registrada e é imperceptível.
+            window.scrollTo(0, 1);
+            setTimeout(function () {
+                bgVideos.forEach(forcePlay);
+                window.scrollTo(0, 0);
+                setTimeout(function () { bgVideos.forEach(forcePlay); }, 120);
+            }, 150);
+        };
+        var watchdog = setInterval(function () {
+            ticks++;
+            if (!heroVisible || doc.visibilityState !== "visible") { return; }
+            var stalled = bgVideos.filter(function (v) {
+                var stuck = v.el.paused || v.el.currentTime === v.lastT;
+                v.lastT = v.el.currentTime;
+                return stuck;
+            });
+            stalled.forEach(forcePlay);
+            okTicks = stalled.length ? 0 : okTicks + 1;
+            // depois que o preloader saiu, se ainda houver vídeo parado, dá o
+            // "empurrão" de rolagem (1x). Não exige dados carregados: o Safari do
+            // iPhone nem começa a carregar o vídeo enquanto não decide tocá-lo.
+            if (stalled.length && root.classList.contains("is-loaded") && ticks >= 3) {
+                nudgeScroll();
+            }
+            if (okTicks >= 3 || ticks > 20) { clearInterval(watchdog); }
+        }, 600);
+
+        // DIAGNÓSTICO: abra o site com #debug-video no fim do endereço para ver,
+        // na tela, o estado de cada vídeo (útil para testar no iPhone).
+        if (/debug-video/.test(location.hash)) {
+            var dbg = doc.createElement("pre");
+            dbg.style.cssText = "position:fixed;left:8px;right:8px;top:72px;z-index:999;margin:0;padding:10px;" +
+                "background:rgba(0,0,0,.85);color:#9f9;font:11px/1.45 monospace;white-space:pre-wrap;border-radius:8px;pointer-events:none";
+            doc.body.appendChild(dbg);
+            var t0 = Date.now();
+            setInterval(function () {
+                var policy = navigator.getAutoplayPolicy ? navigator.getAutoplayPolicy("mediaelement") : "n/d";
+                dbg.textContent = "t=" + ((Date.now() - t0) / 1000).toFixed(1) + "s  autoplay=" + policy +
+                    "  saveData=" + !!(navigator.connection && navigator.connection.saveData) +
+                    "  heroVisível=" + heroVisible + "  empurrão=" + nudged + "\n" +
+                    bgVideos.map(function (v, i) {
+                        var e = v.el;
+                        return "vídeo " + (i + 1) + ": " + (e.paused ? "PAUSADO" : "tocando") +
+                            " t=" + e.currentTime.toFixed(2) + " ready=" + e.readyState + " net=" + e.networkState +
+                            (e.error ? " ERRO=" + e.error.code : "");
+                    }).join("\n") + "\n" + navigator.userAgent.replace(/^Mozilla\/5\.0 /, "").slice(0, 120);
+            }, 400);
         }
     }
 
