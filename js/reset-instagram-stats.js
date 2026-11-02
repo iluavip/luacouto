@@ -10,11 +10,11 @@ localStorage.removeItem('pornhub_stats');
 
 // Define valores corretos do Instagram @iluavip
 const correctInstagramData = {
-    followers: 86000,       // 86 mil seguidores REAL
-    following: 428,         // 428 seguindo REAL
+    followers: 92000,       // 92 mil seguidores (perfil público, nov/2026)
+    following: 702,         // 702 seguindo (perfil público, nov/2026)
     avgLikes: 12500,       // Média realista de likes
     engagementRate: 14.5,  // Taxa de engajamento excelente
-    posts: 97,             // Posts publicados REAL
+    posts: 111,            // Posts publicados (perfil público, nov/2026)
     monthlyGrowth: 3200,   // Crescimento mensal realista
     dailyGrowth: 107,      // Crescimento diário realista
     lastUpdate: new Date().toISOString()
@@ -22,23 +22,23 @@ const correctInstagramData = {
 
 // Define valores corretos do XVideos (atualizados)
 const correctXVideosData = {
-    profileViews: 1393798,
-    subscribers: 32504,
-    videoViews: 77260396,
-    rankingBrazil: 12162,
-    rankingWorld: 5466,
+    profileViews: 1623638,
+    subscribers: 37157,
+    videoViews: 93869025,
+    rankingBrazil: 12134,
+    rankingWorld: 5185,
     lastUpdate: new Date().toISOString()
 };
 
 // Define valores corretos do Pornhub
 const correctPornhubData = {
-    modelRanking: 3756,
-    weeklyRanking: 4009,
-    monthlyRanking: 3756,
-    yearlyRanking: 3513,
-    videoViews: 3115074,
-    profileViews: 1254314,
-    subscribers: 14500,
+    modelRanking: 3575,
+    weeklyRanking: 3552,
+    monthlyRanking: 3575,
+    yearlyRanking: 3570,
+    videoViews: 3568406,
+    profileViews: 1464991,
+    subscribers: 17100,
     lastUpdate: new Date().toISOString()
 };
 
@@ -67,10 +67,10 @@ if (window.liveStats) {
 document.addEventListener('DOMContentLoaded', () => {
     // Instagram
     const igFollowers = document.getElementById('ig-followers');
-    if (igFollowers) igFollowers.textContent = '86K';
+    if (igFollowers) igFollowers.textContent = '92K';
 
     const igFollowing = document.getElementById('ig-following');
-    if (igFollowing) igFollowing.textContent = '428';
+    if (igFollowing) igFollowing.textContent = '702';
 
     const igAvgLikes = document.getElementById('ig-avg-likes');
     if (igAvgLikes) igAvgLikes.textContent = '12.5K';

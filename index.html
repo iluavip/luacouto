@@ -9,6 +9,8 @@
 
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <style>html,body{background:#0a0807;color:#f4ede3}</style>
 
     <meta name="description" content="Site Oficial da Modelo Luana Couto (iluavip) no PRIVACY.COM.BR - A plataforma #1 do Brasil. Conteúdo exclusivo no Privacy.com.br, OnlyFans, Telegram VIP e ensaios sensuais. Perfil oficial: privacy.com.br/Profile/iluavip">
     <meta name="keywords" content="privacy.com.br, privacy luana couto, luana couto privacy, privacy.com.br iluavip, Privacy Brasil, Luana Couto, iluavip, privacy.com.br oficial, plataforma privacy, acompanhante luana couto, luana couto gp, modelo sensual, onlyfans luana couto, privacy.com.br login, privacy conteudo exclusivo, telegram vip, conteúdo adulto, privacy.com.br modelos, ensaios sensuais, xvideos, modelo brasileira">
@@ -77,7 +79,7 @@
     }
     </script>
 
-    <meta name="theme-color" content="#7f00ff">
+    <meta name="theme-color" content="#0a0807">
     <link rel="manifest" href="manifest.json">
 
     <!-- Pinterest Rich Pins -->
@@ -185,25 +187,6 @@
     }
     </script>
 
-    <!-- Script de Rastreamento de Elite para GA4 -->
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Rastreia cliques em botões de entrada (Privacy, Onlyfans, etc)
-        const trackButtons = document.querySelectorAll('.button-fill, .whatsapp-float');
-        trackButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const label = this.innerText || 'WhatsApp';
-                if (typeof gtag === 'function') {
-                    gtag('event', 'conversion_click', {
-                        'event_category': 'Engagement',
-                        'event_label': label,
-                        'value': 1
-                    });
-                }
-            });
-        });
-    });
-    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMG2C9NB4V"></script>
     <script>
@@ -236,1562 +219,524 @@
     }
     </script>
 
+
     <!-- TITLE -->
-    <title>Luana Couto</title>
+    <title>Luana Couto | Modelo e Criadora de Conteúdo — @iluavip</title>
 
     <!-- FAVICON -->
-    <link href="img/favicon.ico" rel="icon">
+    <link rel="icon" href="favicon.ico?v=2" sizes="any">
+    <link rel="icon" href="img/favicon-32.png?v=2" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=2">
 
-    <!-- BOOTSTRAP CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script>document.documentElement.classList.add('js');</script>
 
-    <!-- FONT-AWESOME -->
-    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600;700&display=swap">
 
-    <!-- OWL CAROUSEL -->
-    <link href="css/owl.carousel.min.css" rel="stylesheet">
-    <link href="css/owl.theme.default.css" rel="stylesheet">
-
-    <!-- LIGHTBOX -->
-    <link rel=" stylesheet" href="css/lightbox.css">
-
-    <!--Style CSS file-->
-    <link rel=" stylesheet" href="css/style.css">
-    <link rel=" stylesheet" href="css/custom_fix.css">
+    <!-- ESTILO -->
+    <link rel="preload" as="image" href="img/hero-poster-mobile-top.webp">
+    <link rel="stylesheet" href="css/site.css?v=20261101e">
 
 </head>
 
 <body>
+    <a class="skip-link" href="#about">Pular para o conteúdo</a>
 
-    <!-- ====== Preloader ======  -->
-    <div id="loader-wrapper">
-        <div id="loader"></div>
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
+    <!-- ====== PRELOADER ====== -->
+    <div class="preloader" aria-hidden="true">
+        <div class="preloader-inner">
+            <picture><source srcset="img/logo-pimenta.webp" type="image/webp"><img src="img/logo-pimenta.png" alt="" width="499" height="538"></picture>
+            <span class="preloader-name">Luana Couto</span>
+            <span class="preloader-bar"><i></i></span>
+        </div>
     </div>
-    <!-- ======End Preloader ======  -->
 
-    <!-- ======START NAVGITION ======  -->
-    <nav class="navbar">
-        <div class="nav-icon">
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-        </div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
 
-        <div class="navbg">&nbsp;</div>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#home" data-scroll-nav="0">Luana Couto</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#performance" data-scroll-nav="1">Performance</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#about" data-scroll-nav="2">Modelo</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#portfolio" data-scroll-nav="3">Espaço Patrocinado</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#package" data-scroll-nav="4">Mundo secreto</a>
-            </li>
-        </ul>
-    </nav>
-    <!-- ====== END NAVGITION ======  -->
+    <!-- ====== HEADER ====== -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#home" aria-label="Luana Couto — início">
+                <picture><source srcset="img/logo-pimenta.webp" type="image/webp"><img src="img/logo-pimenta.png" alt="" width="499" height="538"></picture>
+                <span class="brand-name">Luana Couto</span>
+            </a>
 
-    <!-- =======START HEADER=========== -->
-    <header class="home" id="home" data-scroll-index="0">
-        <div class="video-container">
-            <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="bg-video video-top" poster="img/hero-01.jpg"><source src="video/Apresentacao-mobile.mp4" type="video/mp4" media="(max-width: 991px)"><source src="video/Apresentacao.mp4" type="video/mp4"></video>
-            <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="bg-video video-mid" poster="img/hero-01.jpg"><source src="video/Apresentacao-mobile.mp4" type="video/mp4" media="(max-width: 991px)"><source src="video/Apresentacao.mp4" type="video/mp4"></video>
-            <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="bg-video video-bottom" poster="img/hero-01.jpg"><source src="video/Apresentacao-mobile.mp4" type="video/mp4" media="(max-width: 991px)"><source src="video/Apresentacao.mp4" type="video/mp4"></video>
-        </div>
-        <div class="logo-box">
-            <picture><source srcset="img/logo.webp" type="image/webp"><img data-webp src="img/logo.png" alt="header-Logo" class="logo"></picture>
-        </div>
-        <!-- START HEADER SECTION CONTENT -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 home-content mt-md-5 mt-sm-5 text-center">
-                    <h2>Luana Couto</h2>
-                    <div class="button-bg">
-                        <a target="_blank" href="https://luanacouto.linkbio.co" class="button button-fill">MEUS LINKS</a>
-                    </div>
-                    <!-- Language Selection -->
-                    <div class="lang-selector-center">
-                        <a href="index.html"><img src="https://flagcdn.com/w80/br.png" class="flag-btn active" alt="Português" title="Português"></a>
-                        <a href="index_en.html"><img src="https://flagcdn.com/w80/us.png" class="flag-btn" alt="English" title="English"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="arrow bounce">
-            <a class="fa fa-long-arrow-down fa-2x" href="#about"></a>
-        </div>
-        <!-- END HEADER SECTION CONTENT -->
-    </header>
-    <!-- ====== END HEADER ======  -->
-
-    <!-- Scroll to Top -->
-    <div id="scroll-to-top"><i class="fa fa-arrow-up fa-fw"></i></div>
-
-    <!-- ====== START GLOBAL PERFORMANCE (SEGUNDA SEÇÃO) ====== -->
-    <section class="global-performance padding" id="performance" data-scroll-index="1" style="background: #0a0a0a; padding: 80px 0;">
-        <div class="container">
-            <!-- Título Principal -->
-            <div class="row">
-                <div class="col-lg-12 text-center mb-5">
-                    <h2 class="heading-primary" style="color: #fff; font-size: 3.5rem; font-weight: 900;">
-                        Performance Global <span class="live-badge">TEMPO REAL</span>
-                    </h2>
-                    <p style="color: rgba(255, 255, 255, 0.8); font-size: 1.2rem;">
-                        Métricas atualizadas em tempo real de todas as plataformas
-                    </p>
-                </div>
-            </div>
-
-            <!-- Instagram Section (Compacta) -->
-            <div class="row mb-5 align-items-center">
-                <div class="col-lg-4">
-                    <div class="platform-header" style="background: linear-gradient(45deg, #405DE6, #C13584);">
-                        <i class="fa fa-instagram"></i>
-                        <h3>@iluavip</h3>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="row">
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="metric-box">
-                                <h4 id="ig-followers-compact">86K</h4>
-                                <p>Seguidores</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="metric-box">
-                                <h4 id="ig-engagement-compact">14.5%</h4>
-                                <p>Engajamento</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="metric-box">
-                                <h4 id="ig-posts-compact">97</h4>
-                                <p>Posts</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="metric-box">
-                                <h4 id="ig-following-compact">428</h4>
-                                <p>Seguindo</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- XVideos Section (Compacta) -->
-            <div class="row mb-5 align-items-center">
-                <div class="col-lg-4">
-                    <div class="platform-header" style="background: linear-gradient(135deg, #111, #f26522);">
-                        <span style="color: #f26522; font-weight: bold; font-size: 2rem;">XV</span>
-                        <h3>XVideos</h3>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="row">
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="metric-box">
-                                <h4 id="xv-video-views-compact">77.3M</h4>
-                                <p>Visualizações</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="metric-box">
-                                <h4 id="xv-subscribers-compact">32.5K</h4>
-                                <p>Inscritos</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="metric-box">
-                                <h4 id="xv-profile-views-compact">1.39M</h4>
-                                <p>Perfil Views</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="metric-box">
-                                <h4>#5466</h4>
-                                <p>Ranking Mundial</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pornhub Section (Compacta) -->
-            <div class="row mb-5 align-items-center">
-                <div class="col-lg-4">
-                    <div class="platform-header" style="background: linear-gradient(135deg, #1a1a1a, #ff9000);">
-                        <span style="color: #ff9000; font-weight: bold; font-size: 2rem;">PH</span>
-                        <h3>Pornhub</h3>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="row">
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="metric-box">
-                                <h4 id="ph-video-views-compact">3.1M</h4>
-                                <p>Visualizações</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="metric-box">
-                                <h4 id="ph-subscribers-compact">14.5K</h4>
-                                <p>Inscritos</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="metric-box">
-                                <h4 id="ph-model-ranking-compact">#3756</h4>
-                                <p>Ranking Modelo</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="metric-box">
-                                <h4 id="ph-profile-views-compact">1.25M</h4>
-                                <p>Perfil Views</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Totais Combinados -->
-            <div class="row mt-5">
-                <div class="col-lg-12">
-                    <div class="total-stats-box">
-                        <div class="row text-center">
-                            <div class="col-md-3">
-                                <h2 style="color: #4caf50;">80.4M+</h2>
-                                <p>Visualizações Totais</p>
-                            </div>
-                            <div class="col-md-3">
-                                <h2 style="color: #2196f3;">133K+</h2>
-                                <p>Seguidores Total</p>
-                            </div>
-                            <div class="col-md-3">
-                                <h2 style="color: #ff9800;">2.64M+</h2>
-                                <p>Acessos ao Perfil</p>
-                            </div>
-                            <div class="col-md-3">
-                                <h2 style="color: #e91e63;">TOP 5%</h2>
-                                <p>Ranking Mundial</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <style>
-        .global-performance {
-            background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
-        }
-
-        .platform-header {
-            padding: 20px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            color: white;
-            height: 100px;
-            justify-content: center;
-        }
-
-        .platform-header i, .platform-header span {
-            font-size: 2.5rem;
-        }
-
-        .platform-header h3 {
-            margin: 0;
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-
-        .metric-box {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-
-        .metric-box:hover {
-            background: rgba(255, 255, 255, 0.08);
-            transform: translateY(-3px);
-        }
-
-        .metric-box h4 {
-            color: #fff;
-            font-size: 1.8rem;
-            font-weight: 900;
-            margin: 0 0 5px 0;
-        }
-
-        .metric-box p {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            margin: 0;
-        }
-
-        .total-stats-box {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 40px;
-            border-radius: 20px;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .total-stats-box h2 {
-            font-weight: 900;
-            margin-bottom: 10px;
-        }
-
-        .total-stats-box p {
-            color: rgba(255, 255, 255, 0.7);
-            text-transform: uppercase;
-            font-size: 0.9rem;
-        }
-    </style>
-    <!-- ====== END GLOBAL PERFORMANCE ====== -->
-
-    <!-- ======  START ABOUT ====== -->
-    <section class="about-section padding" id="about" data-scroll-index="2">
-        <div class="container">
-            <div class="row">
-
-                <!-- START ABOUT SECTION TITLE -->
-                <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6">
-                    <div class="about-text">
-                        <div class="sub-heading">
-                            <h2>+4 anos <br>de experiência como modelo</h2>
-                        </div>
-                        <span class="separetor"></span>
-                        <p>Meu desejo é fazer você se divertir.</p>
-                        <div class="button-bg">
-                            <a target="_blank" href="https://luanacouto.linkbio.co"><button class="button button-fill">MEUS LINKS</button></a>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- END ABOUT SECTION TITLE -->
-
-                <!-- START ABOUT SECTION IMAGE -->
-                <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                    <div class="new-about-img-wraper">
-
-                        <div class="new-about-img-group mt-5">
-                            <div class="about-img-group">
-                                <div class="about-img">
-                                    <picture><source srcset="img/about-01.webp" type="image/webp"><img data-webp loading="lazy" src="img/about-01.jpg" alt="about-image"></picture>
-
-                                </div>
-                            </div>
-
-                            <div class="about-img-group">
-                                <div class="about-img">
-                                    <picture><source srcset="img/about-02.webp" type="image/webp"><img data-webp loading="lazy" src="img/about-02.jpg" alt="about-image"></picture>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="new-about-img-group">
-                            <div class="about-img-group">
-                                <div class="about-img">
-                                    <picture><source srcset="img/about-03.webp" type="image/webp"><img data-webp loading="lazy" src="img/about-03.jpg" alt="about-image"></picture>
-                                </div>
-                            </div>
-
-                            <div class="about-img-group">
-                                <div class="about-img">
-                                    <picture><source srcset="img/about-04.webp" type="image/webp"><img data-webp loading="lazy" src="img/about-04.jpg" alt="about-image"></picture>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- END ABOUT SECTION IMAGE -->
-
-            </div>
-        </div>
-    </section>
-    <!-- ======  END ABOUT ====== -->
-
-    <!-- ====== START PORTFOLIO ======  -->
-    <section class="portfolio padding" id="portfolio" data-scroll-index="3">
-        <div class="container-fluid">
-
-            <!-- START PORTFOLIO SECTION TITLE -->
-            <div class="port-title text-center">
-                <h2 class="heading-primary mb-5">Espaço Patrocinado</h2>
-                <p class="mb-5">Este é o espaço perfeito para marcas, fotógrafos e agências que desejam se conectar com uma audiência engajada e de alto valor. Com uma visibilidade massiva e uma presença marcante, 
-                    a Modelo Luana Couto é referência no universo masculino, destacando-se por sua abordagem única e envolvente. 
-                    Ao colaborar com Luana Couto, sua marca será apresentada a um público selecionado e fiel, potencializando o reconhecimento e o desejo pelos seus produtos e serviços. 
-                    Junte-se a quem já conhece o poder da sensualidade aliada ao marketing de alto impacto e esteja à frente da concorrência.
-                    Vamos conversar! Seja parte de um projeto que une sensualidade e inovação, criando experiências marcantes para o público e resultados extraordinários.
-
-
-                </p>
-            </div>
-            <!-- END PORTFOLIO SECTION TITLE -->
-
-
-            <!--START PORTFOLIO FILTER BUTTONS -->
-            <nav>
-                <ul class="simplefilter filter-port">
-                    <li class="active button" data-filter="all">Todas</li>&#47;
-                    <li class="button" data-filter="1">Casual</li>&#47;
-                    <li class="button" data-filter="2">Sensual</li>&#47;
-                    <li class="button" data-filter="3">Artístico</li>
-                    <!-- <li class="button" data-filter="4">Manicure &#38; Pedicure</li> -->
+            <nav class="nav-desktop" aria-label="Principal">
+                <ul>
+                    <li><a href="#about">Modelo</a></li>
+                    <li><a href="#performance">Números</a></li>
+                    <li><a href="#portfolio">Parcerias</a></li>
+                    <li><a href="#package">Mundo secreto</a></li>
                 </ul>
             </nav>
-            <!-- END PORTFOLIO FILTER BUTTONS -->
 
-
-            <div class="row">
-                <!--START PORTFOLIO CONTENT -->
-                <div class="filtr-container">
-
-                    <!-- PORTFOLIO FILTER ITEM-->
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 filtr-item" data-category="1">
-                        <div class="port-caption">
-                            <!-- PORTFOLIO IMAGE -->
-                            <picture><source srcset="img/portfolio/portfolio-01.webp" type="image/webp"><img data-webp src="img/portfolio/portfolio-01.jpg" alt="Luana Couto iluavip ensaio casual sexy no Privacy e OnlyFans" title="Luana Couto - Modelo Profissional" /></picture>
-                            <!-- PORTFOLIO TITLE -->
-                            <div class="overlay">
-                                <div class="view-more">
-                                    <!-- Link para abrir a imagem no Lightbox -->
-                                    <a href="img/portfolio/portfolio-01.jpg" data-lightbox="mygallery">
-                                        <i class="fa fa-plus fa-lg fa-fw"></i>
-                                    </a>
-                                    <!-- Link separado para abrir uma nova aba ao clicar em @iluavip -->
-                                    <a href="https://www.instagram.com/valm.iirr/" target="_blank" style="color: white; text-decoration: underline;">
-                                        Valmir Dacil
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PORTFOLIO FILTER ITEM-->
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 filtr-item" data-category="2">
-                        <div class="port-caption">
-                            <!-- PORTFOLIO IMAGE -->
-                            <picture><source srcset="img/portfolio/portfolio-02.webp" type="image/webp"><img data-webp src="img/portfolio/portfolio-02.jpg" alt="Luana Couto lua couto sensualidade telegram vip pornhub e xvideos" title="Luana Couto - Sensualidade e Elegância" /></picture>
-                            <!-- PORTFOLIO TITLE -->
-                            <div class="overlay">
-                                <div class="view-more">
-                                    <!-- Link para abrir a imagem no Lightbox -->
-                                    <a href="img/portfolio/portfolio-02.jpg" data-lightbox="mygallery">
-                                        <i class="fa fa-plus fa-lg fa-fw"></i>
-                                    </a>
-                                    <!-- Link separado para abrir uma nova aba ao clicar em @iluavip -->
-                                    <a href="https://www.instagram.com/ovulgojesus/" target="_blank" style="color: white; text-decoration: underline;">
-                                        Ciero
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PORTFOLIO FILTER ITEM-->
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 filtr-item" data-category="1">
-                        <div class="port-caption">
-                            <!-- PORTFOLIO IMAGE -->
-                            <picture><source srcset="img/portfolio/portfolio-03.webp" type="image/webp"><img data-webp src="img/portfolio/portfolio-03.jpg" alt="Luana Couto sexy conte�do adulto xvideos luxo" /></picture>
-                            <!-- PORTFOLIO TITLE -->
-                            <div class="overlay">
-                                <div class="view-more">
-                                    <a href="img/portfolio/portfolio-03.jpg" data-lightbox="mygallery"
-                                        data-title="">
-                                        <i class="fa fa-plus fa-lg fa-fw"></i>
-                                    </a>
-                                    <!-- Link separado para abrir uma nova aba ao clicar em @iluavip -->
-                                    <a href="https://www.instagram.com/jayrophotography.oficial/" target="_blank" style="color: white; text-decoration: underline;">
-                                        Jayro Fotógrafo Rio de Janeiro
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PORTFOLIO FILTER ITEM-->
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 filtr-item" data-category="2">
-                        <div class="port-caption">
-                            <!-- PORTFOLIO IMAGE -->
-                            <picture><source srcset="img/portfolio/portfolio-04.webp" type="image/webp"><img data-webp src="img/portfolio/portfolio-04.jpg" alt="Luana Couto iluavip pornografia art�stica elegante" /></picture>
-                            <!-- PORTFOLIO TITLE -->
-                            <div class="overlay">
-                                <div class="view-more">
-                                    <a href="img/portfolio/portfolio-04.jpg" data-lightbox="mygallery"
-                                        data-title="">
-                                        <i class="fa fa-plus fa-lg fa-fw"></i>
-                                    </a>
-                                    <!-- Link separado para abrir uma nova aba ao clicar em @iluavip -->
-                                    <a href="https://www.instagram.com/valm.iirr/" target="_blank" style="color: white; text-decoration: underline;">
-                                        Valmir Dacil
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PORTFOLIO FILTER ITEM-->
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 filtr-item" data-category="3">
-                        <div class="port-caption">
-                            <!-- PORTFOLIO IMAGE -->
-                            <picture><source srcset="img/portfolio/portfolio-05.webp" type="image/webp"><img data-webp src="img/portfolio/portfolio-05.jpg" alt="Luana Couto lua couto ensaio exclusivo sexy" title="Luana Couto - Mundo Secreto" /></picture>
-                            <!-- PORTFOLIO TITLE -->
-                            <div class="overlay">
-                                <div class="view-more">
-                                    <!-- Link para abrir a imagem no Lightbox -->
-                                    <a href="img/portfolio/portfolio-05.jpg" data-lightbox="mygallery">
-                                        <i class="fa fa-plus fa-lg fa-fw"></i>
-                                    </a>
-                                    <!-- Link separado para abrir uma nova aba ao clicar em @iluavip -->
-                                    <a href="https://www.instagram.com/_rafaferrer/" target="_blank" style="color: white; text-decoration: underline;">
-                                        Rafael Ferrer
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PORTFOLIO FILTER ITEM-->
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 filtr-item" data-category="4">
-                        <div class="port-caption text-center">
-                            <!-- PORTFOLIO IMAGE -->
-                            <img src="img/portfolio/portfolio-06.jpg" alt="Luana Couto iluavip modelo brasileira sensual" title="Luana Couto - Refer�ncia Nacional" />
-                            <!-- PORTFOLIO TITLE -->
-                            <div class="overlay">
-                                <div class="view-more">
-                                    <a href="img/portfolio/portfolio-06.jpg" data-lightbox="mygallery"
-                                        data-title="">
-                                        <i class="fa fa-plus fa-lg fa-fw"></i>
-                                    </a>
-                                    <!-- Link separado para abrir uma nova aba ao clicar em @iluavip -->
-                                    <a href="https://www.instagram.com/carolineriegerfotografa" target="_blank" style="color: white; text-decoration: underline;">
-                                        Caroline Rieger | Fotografa
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="header-actions">
+                <div class="lang-switch" aria-label="Idioma">
+                    <a href="index.html" hreflang="pt-br" aria-current="true" lang="pt-BR">PT</a>
+                    <a href="index_en.html" hreflang="en" lang="en">EN</a>
                 </div>
-                <!--END PORTFOLIO CONTENT -->
+                <a class="btn btn-gold btn-sm header-cta" href="https://privacy.com.br/checkout/iluavip" target="_blank" rel="noopener" data-track="Header Privacy" data-magnetic>Assinar Privacy</a>
+                <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <span></span><span></span>
+                </button>
             </div>
         </div>
-    </section>
-    <!-- ====== END PORTFOLIO ======  -->
+    </header>
 
-    <!-- ====== START BRAND IMPACT (MEDIA KIT) ====== -->
-    <section class="impact-section padding bg-white" id="impact" style="background: #ffffff; padding: 120px 0;">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center mb-5">
-                    <h2 class="heading-primary" style="color: #1a1a1a; font-weight: 800; letter-spacing: -1px;">Impacto de Marca</h2>
-                    <p style="color: #666; font-size: 1.1rem; margin-top: 15px;">Visibilidade massiva e audiência qualificada para marcas de alto nível.</p>
-                </div>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true" inert>
+        <nav aria-label="Menu móvel">
+            <ol>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Modelo</a></li>
+                <li><a href="#performance">Números</a></li>
+                <li><a href="#portfolio">Parcerias</a></li>
+                <li><a href="#package">Mundo secreto</a></li>
+            </ol>
+        </nav>
+        <div class="mobile-menu-foot">
+            <a class="btn btn-gold" href="https://privacy.com.br/checkout/iluavip" target="_blank" rel="noopener" data-track="Menu Privacy">Assinar Privacy</a>
+            <div class="lang-switch" aria-label="Idioma">
+                <a href="index.html" hreflang="pt-br" aria-current="true" lang="pt-BR">PT</a>
+                <a href="index_en.html" hreflang="en" lang="en">EN</a>
             </div>
-            <div class="row text-center mt-4">
-                <div class="col-md-4 mb-4">
-                    <div class="impact-card-modern">
-                        <div class="impact-icon-circle">
-                            <i class="fa fa-users"></i>
-                        </div>
-                        <h3 class="impact-number">+239.000</h3>
-                        <p class="impact-label">Alcance Mensal</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="impact-card-modern">
-                        <div class="impact-icon-circle">
-                            <i class="fa fa-eye"></i>
-                        </div>
-                        <h3 class="impact-number">+700.000</h3>
-                        <p class="impact-label">Impressões de Marca</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="impact-card-modern">
-                        <div class="impact-icon-circle">
-                            <i class="fa fa-heart"></i>
-                        </div>
-                        <h3 class="impact-number">98%</h3>
-                        <p class="impact-label">Taxa de Fidelidade</p>
-                    </div>
-                </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- ====== HERO ====== -->
+        <section class="hero" id="home">
+            <div class="hero-media" aria-hidden="true">
+                <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="bg-video video-top" poster="img/hero-poster-mobile-top.webp"><source src="video/Apresentacao-mobile.mp4" type="video/mp4"></video>
+                <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="bg-video video-mid" poster="img/hero-poster-mobile-mid.webp"><source src="video/Apresentacao-mobile.mp4#t=5" type="video/mp4"></video>
+                <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="bg-video video-bottom" poster="img/hero-poster-mobile-bottom.webp"><source src="video/Apresentacao-mobile.mp4#t=9" type="video/mp4"></video>
             </div>
-            <div class="row mt-5">
-                <div class="col-lg-12 text-center">
-                    <p class="audit-text mb-4"><i class="fa fa-check-circle"></i> Dados auditados via Google Analytics 4</p>
-                    <div class="button-bg">
-                        <a href="https://luanacouto.linkbio.co" target="_blank">
-                            <button class="button button-fill" style="padding: 18px 45px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">SEJA UM PARCEIRO</button>
+
+            <div class="container hero-content">
+                <span class="eyebrow hero-eyebrow">Modelo · Criadora de conteúdo · @iluavip</span>
+                <h1 class="hero-title" data-split-chars="Luana Couto">
+                    <span class="line">Luana</span>
+                    <span class="line"><em>Couto</em></span>
+                </h1>
+
+                <div class="hero-bottom">
+                    <p class="hero-sub">Elegância, sensualidade e presença. Conteúdo exclusivo nas principais plataformas do Brasil e do mundo.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-gold" href="https://privacy.com.br/checkout/iluavip" target="_blank" rel="noopener" data-track="Hero Privacy" data-magnetic>
+                            Assinar Privacy
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                         </a>
+                        <a class="btn btn-ghost" href="https://luanacouto.linkbio.co" target="_blank" rel="noopener" data-track="Hero Meus Links" data-magnetic>Meus links</a>
                     </div>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="hero-stat"><strong data-count="97" data-suffix="M+">97M+</strong><span>Visualizações</span></div>
+                    <div class="hero-stat"><strong data-count="146" data-suffix="K+">146K+</strong><span>Seguidores</span></div>
+                    <div class="hero-stat"><strong data-count="4" data-prefix="+">+4</strong><span>Anos de carreira</span></div>
+                </div>
+            </div>
+
+            <span class="scroll-cue" aria-hidden="true">Role</span>
+        </section>
+
+        <!-- ====== MARQUEE DE PLATAFORMAS ====== -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <span>Privacy</span><i></i><span>OnlyFans</span><i></i><span>Telegram VIP</span><i></i><span>XVideos</span><i></i><span>Pornhub</span><i></i><span>ManyVids</span><i></i><span>Close Fans</span><i></i><span>FanFever</span><i></i><span>QueroPack</span><i></i>
+                </div>
+                <div class="marquee-group">
+                    <span>Privacy</span><i></i><span>OnlyFans</span><i></i><span>Telegram VIP</span><i></i><span>XVideos</span><i></i><span>Pornhub</span><i></i><span>ManyVids</span><i></i><span>Close Fans</span><i></i><span>FanFever</span><i></i><span>QueroPack</span><i></i>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ====== END BRAND IMPACT ====== -->
 
-    <!-- ====== START INSTAGRAM STATS ====== -->
-    <section class="instagram-stats padding" id="instagram-stats" style="background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); padding: 100px 0;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="ig-brand-box">
-                        <h2 style="color: #fff; font-weight: 900; font-size: 3.5rem;">
-                            <i class="fa fa-instagram" style="margin-right: 15px;"></i>@iluavip
-                        </h2>
-                        <p class="text-white" style="font-size: 1.3rem; margin-top: 20px; opacity: 0.95;">
-                            Perfil oficial verificado no Instagram com engajamento massivo e audiência premium global.
-                        </p>
-                        <div class="ig-verified-badge">
-                            <i class="fa fa-check-circle"></i> Conta Profissional Verificada
-                        </div>
-                        <a href="https://www.instagram.com/iluavip" target="_blank" class="ig-follow-btn">
-                            <i class="fa fa-instagram"></i> SEGUIR @ILUAVIP
-                        </a>
+        <!-- ====== SOBRE ====== -->
+        <section class="section section-glow" id="about">
+            <div class="container about-grid">
+                <div class="about-copy about-text">
+                    <span class="eyebrow" data-reveal>A modelo</span>
+                    <h2 class="title" data-split-words>+4 anos de <em>experiência</em> como modelo</h2>
+                    <p class="lead" data-reveal style="--d:2">Modelo e criadora de conteúdo brasileira, Luana Couto construiu uma carreira sólida unindo sensualidade, elegância e uma relação próxima com o público, presente nas principais plataformas do Brasil e do mundo.</p>
+
+                    <div class="about-facts">
+                        <div class="about-fact" data-reveal style="--d:3"><strong data-count="4" data-prefix="+">+4</strong><span>Anos</span></div>
+                        <div class="about-fact" data-reveal style="--d:4"><strong data-count="9">9</strong><span>Plataformas</span></div>
+                        <div class="about-fact" data-reveal style="--d:5"><strong data-count="97" data-suffix="M+">97M+</strong><span>Views</span></div>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <div class="ig-stat-card">
-                                <div class="ig-icon"><i class="fa fa-users"></i></div>
-                                <div class="ig-data">
-                                    <h3 class="ig-number" id="ig-followers">86K</h3>
-                                    <p class="ig-label">Seguidores <span class="live-indicator"></span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="ig-stat-card">
-                                <div class="ig-icon"><i class="fa fa-heart"></i></div>
-                                <div class="ig-data">
-                                    <h3 class="ig-number" id="ig-avg-likes">12.5K</h3>
-                                    <p class="ig-label">Média de Likes</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="ig-stat-card">
-                                <div class="ig-icon"><i class="fa fa-comment"></i></div>
-                                <div class="ig-data">
-                                    <h3 class="ig-number" id="ig-engagement">14.5%</h3>
-                                    <p class="ig-label">Taxa de Engajamento</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="ig-stat-card">
-                                <div class="ig-icon"><i class="fa fa-photo"></i></div>
-                                <div class="ig-data">
-                                    <h3 class="ig-number" id="ig-posts">97</h3>
-                                    <p class="ig-label">Posts Publicados</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 mb-4">
-                            <div class="ig-stat-card" style="background: rgba(255, 255, 255, 0.2);">
-                                <div class="ig-icon"><i class="fa fa-user-plus"></i></div>
-                                <div class="ig-data" style="flex: 1;">
-                                    <h3 class="ig-number"><span id="ig-following">428</span> seguindo</h3>
-                                    <p class="ig-label">Perfil Seletivo - Alta Qualidade</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Instagram Growth Chart -->
-                    <div class="ig-growth-card mt-4">
-                        <h4 style="color: #fff; margin-bottom: 15px;">📈 Crescimento Mensal</h4>
-                        <div class="growth-stats">
-                            <div class="growth-item">
-                                <span class="growth-label">Este Mês:</span>
-                                <span class="growth-value" id="ig-month-growth">+3.2K</span>
-                            </div>
-                            <div class="growth-item">
-                                <span class="growth-label">Média Diária:</span>
-                                <span class="growth-value" id="ig-daily-growth">+107</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Instagram Demographics -->
-            <div class="row mt-5">
-                <div class="col-lg-12">
-                    <h3 style="color: #fff; text-align: center; margin-bottom: 30px;">👥 Demografia da Audiência</h3>
-                    <div class="row">
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="ig-demo-card">
-                                <div class="demo-icon">👨</div>
-                                <div class="demo-percent">73%</div>
-                                <div class="demo-label">Homens</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="ig-demo-card">
-                                <div class="demo-icon">👩</div>
-                                <div class="demo-percent">27%</div>
-                                <div class="demo-label">Mulheres</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="ig-demo-card">
-                                <div class="demo-icon">📍</div>
-                                <div class="demo-percent">68%</div>
-                                <div class="demo-label">Brasil</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="ig-demo-card">
-                                <div class="demo-icon">🎂</div>
-                                <div class="demo-percent">25-34</div>
-                                <div class="demo-label">Idade Média</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <style>
-        .ig-brand-box {
-            padding: 20px;
-        }
-
-        .ig-verified-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 25px;
-            margin: 20px 0;
-            font-weight: 600;
-        }
-
-        .ig-follow-btn {
-            display: inline-block;
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            color: white;
-            padding: 15px 35px;
-            border-radius: 50px;
-            font-weight: 700;
-            text-decoration: none;
-            text-transform: uppercase;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .ig-follow-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-            color: white;
-            text-decoration: none;
-        }
-
-        .ig-stat-card {
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 15px;
-            padding: 25px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-        }
-
-        .ig-stat-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .ig-icon {
-            font-size: 2.5rem;
-            color: #fff;
-            margin-right: 20px;
-        }
-
-        .ig-number {
-            font-size: 2rem;
-            font-weight: 900;
-            color: #fff;
-            margin: 0;
-        }
-
-        .ig-label {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            margin: 0;
-        }
-
-        .ig-growth-card {
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 15px;
-            padding: 25px;
-            backdrop-filter: blur(10px);
-        }
-
-        .growth-stats {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .growth-item {
-            text-align: center;
-        }
-
-        .growth-label {
-            display: block;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-        }
-
-        .growth-value {
-            display: block;
-            color: #4caf50;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .ig-demo-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            backdrop-filter: blur(5px);
-        }
-
-        .demo-icon {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        .demo-percent {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: #fff;
-        }
-
-        .demo-label {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.9rem;
-        }
-    </style>
-    <!-- ====== END INSTAGRAM STATS ====== -->
-
-    <!-- ====== START XVIDEOS SOCIAL PROOF ====== -->
-    <section class="xvideos-impact padding" id="xvideos-stats" style="background: #111; padding: 100px 0; border-top: 4px solid #f26522;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 mb-5 mb-lg-0">
-                    <div class="x-brand-box">
-                        <h2 style="color: #fff; font-weight: 900; font-size: 3rem;">Performance <br><span style="color: #f26522;">Global</span> <span class="live-badge">AO VIVO</span></h2>
-                        <p class="text-light" style="font-size: 1.2rem; margin-top: 20px; opacity: 0.8;">A Modelo Luana Couto domina as maiores plataformas de entretenimento do mundo, acumulando números que a colocam no topo do mercado internacional.</p>
-                        <a href="https://www.xvideos.com/iluavip#_tabAboutMe" target="_blank" class="xv-tag-link">
-                            <div class="xv-tag">XVIDEOS OFFICIAL PROFILE <i class="fa fa-external-link" style="margin-left: 10px;"></i></div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <div class="xv-stat-card">
-                                <div class="xv-icon"><i class="fa fa-play-circle"></i></div>
-                                <div class="xv-data">
-                                    <h4 class="xv-number" id="xv-video-views">77.3M</h4><span class="live-indicator"></span>
-                                    <p class="xv-label">Visualizações Totais</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="xv-stat-card">
-                                <div class="xv-icon"><i class="fa fa-user-plus"></i></div>
-                                <div class="xv-data">
-                                    <h4 class="xv-number" id="xv-subscribers">32.5K</h4><span class="live-indicator"></span>
-                                    <p class="xv-label">Assinantes Fiéis</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="xv-stat-card wide">
-                                <div class="xv-icon"><i class="fa fa-globe"></i></div>
-                                <div class="xv-data">
-                                    <h4 class="xv-number" id="xv-profile-views">1.393.798</h4><span class="live-indicator"></span>
-                                    <p class="xv-label">Acessos ao Perfil Oficial</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Regional Stats for XVideos -->
-            <div class="row mt-5">
-                <div class="col-lg-12">
-                    <h3 style="color: #fff; text-align: center; margin-bottom: 30px;">📍 Acessos por Região</h3>
-                    <div class="row">
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="region-stat-card">
-                                <div class="region-flag">🇧🇷</div>
-                                <div class="region-name">Brasil</div>
-                                <div class="region-percent" id="xv-brazil-percent">42%</div>
-                                <div class="region-views">31.6M views</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="region-stat-card">
-                                <div class="region-flag">🇺🇸</div>
-                                <div class="region-name">USA</div>
-                                <div class="region-percent" id="xv-usa-percent">18%</div>
-                                <div class="region-views">13.5M views</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="region-stat-card">
-                                <div class="region-flag">🇵🇹</div>
-                                <div class="region-name">Portugal</div>
-                                <div class="region-percent" id="xv-portugal-percent">12%</div>
-                                <div class="region-views">9.0M views</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="region-stat-card">
-                                <div class="region-flag">🌍</div>
-                                <div class="region-name">Outros</div>
-                                <div class="region-percent" id="xv-others-percent">28%</div>
-                                <div class="region-views">21.0M views</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <style>
-        .region-stat-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            border: 1px solid rgba(242, 101, 34, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .region-stat-card:hover {
-            background: rgba(242, 101, 34, 0.1);
-            transform: translateY(-5px);
-        }
-
-        .region-flag {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .region-name {
-            color: #f26522;
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-
-        .region-percent {
-            font-size: 2rem;
-            font-weight: 900;
-            color: #fff;
-        }
-
-        .region-views {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
-        }
-    </style>
-    <!-- ====== END XVIDEOS SOCIAL PROOF ====== -->
-
-    <!-- ====== START PORNHUB STATS ====== -->
-    <section class="pornhub-stats padding" id="pornhub-stats" style="background: linear-gradient(135deg, #1a1a1a 0%, #ff9000 100%); padding: 100px 0;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12 text-center mb-5">
-                    <h2 style="color: #fff; font-weight: 900; font-size: 3rem;">
-                        <span style="background: #ff9000; color: #000; padding: 5px 15px; border-radius: 10px; font-weight: 900; margin-right: 15px;">PH</span>
-                        Pornhub Stats <span class="live-badge">TEMPO REAL</span>
-                    </h2>
-                    <p class="text-white" style="font-size: 1.1rem; opacity: 0.9;">Métricas atualizadas em tempo real da plataforma global</p>
-                </div>
-            </div>
-            <div class="row">
-                <!-- Rankings -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="ph-stat-box">
-                        <div class="ph-icon-top"><i class="fa fa-trophy"></i></div>
-                        <h3 class="ph-metric" id="ph-model-ranking">#3756</h3>
-                        <p class="ph-label">Ranking de Modelo</p>
-                        <small class="ph-change">↑ 243 posições este mês</small>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="ph-stat-box">
-                        <div class="ph-icon-top"><i class="fa fa-calendar"></i></div>
-                        <h3 class="ph-metric" id="ph-weekly-ranking">#4009</h3>
-                        <p class="ph-label">Ranking Semanal</p>
-                        <small class="ph-change">Top 5% mundial</small>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="ph-stat-box">
-                        <div class="ph-icon-top"><i class="fa fa-star"></i></div>
-                        <h3 class="ph-metric" id="ph-monthly-ranking">#3756</h3>
-                        <p class="ph-label">Ranking Mensal</p>
-                        <small class="ph-change">Subindo rapidamente</small>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="ph-stat-box">
-                        <div class="ph-icon-top"><i class="fa fa-line-chart"></i></div>
-                        <h3 class="ph-metric" id="ph-yearly-ranking">#3513</h3>
-                        <p class="ph-label">Ranking Anual</p>
-                        <small class="ph-change">Best Performance 2024</small>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-4">
-                <!-- Views and Subscribers -->
-                <div class="col-lg-4 col-md-12 mb-4">
-                    <div class="ph-big-stat">
-                        <i class="fa fa-play-circle ph-big-icon"></i>
-                        <h2 class="ph-big-number" id="ph-video-views">3.1M</h2>
-                        <p class="ph-big-label">Visualizações de Vídeo <span class="live-indicator"></span></p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 mb-4">
-                    <div class="ph-big-stat">
-                        <i class="fa fa-users ph-big-icon"></i>
-                        <h2 class="ph-big-number" id="ph-subscribers">14.5K</h2>
-                        <p class="ph-big-label">Inscritos Ativos <span class="live-indicator"></span></p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 mb-4">
-                    <div class="ph-big-stat">
-                        <i class="fa fa-eye ph-big-icon"></i>
-                        <h2 class="ph-big-number" id="ph-profile-views">1.25M</h2>
-                        <p class="ph-big-label">Visualizações do Perfil <span class="live-indicator"></span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-12 text-center">
-                    <a href="https://pt.pornhub.com/model/lua-couto" target="_blank" class="ph-profile-btn">
-                        <i class="fa fa-external-link"></i> VER PERFIL COMPLETO NO PORNHUB
+                    <a class="btn btn-gold" href="https://luanacouto.linkbio.co" target="_blank" rel="noopener" data-track="Sobre Meus Links" data-reveal style="--d:6" data-magnetic>
+                        Meus links
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                     </a>
+
+                    <blockquote class="quote" data-reveal style="--d:7">Meu desejo é fazer você se divertir.</blockquote>
+                </div>
+
+                <div class="about-gallery">
+                    <div class="about-col">
+                        <figure class="about-photo" data-reveal="clip" data-parallax="0.06"><picture><source srcset="img/about-01.webp" type="image/webp"><img loading="lazy" src="img/about-01.jpg" alt="Luana Couto em ensaio fotográfico" width="853" height="1280"></picture></figure>
+                        <figure class="about-photo" data-reveal="clip" style="--d:2" data-parallax="0.06"><picture><source srcset="img/about-02.webp" type="image/webp"><img loading="lazy" src="img/about-02.jpg" alt="Luana Couto, modelo brasileira" width="853" height="1280"></picture></figure>
+                    </div>
+                    <div class="about-col">
+                        <figure class="about-photo" data-reveal="clip" style="--d:1" data-parallax="-0.05"><picture><source srcset="img/about-03.webp" type="image/webp"><img loading="lazy" src="img/about-03.jpg" alt="Luana Couto em produção artística" width="853" height="1280"></picture></figure>
+                        <figure class="about-photo" data-reveal="clip" style="--d:3" data-parallax="-0.05"><picture><source srcset="img/about-04.webp" type="image/webp"><img loading="lazy" src="img/about-04.jpg" alt="Luana Couto, iluavip" width="853" height="1280"></picture></figure>
+                    </div>
+                    <div class="about-badge" aria-hidden="true">
+                        <svg viewBox="0 0 100 100"><defs><path id="badge-circle" d="M50,50 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0"/></defs><text><textPath href="#badge-circle">Luana Couto · Site oficial · @iluavip ·</textPath></text></svg>
+                        <picture><source srcset="img/logo-pimenta.webp" type="image/webp"><img src="img/logo-pimenta.png" alt="" width="499" height="538"></picture>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <style>
-        .ph-stat-box {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 25px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-            height: 100%;
-        }
+        <!-- ====== NÚMEROS ====== -->
+        <section class="section section-alt" id="performance">
+            <div class="container">
+                <div class="section-head center">
+                    <span class="eyebrow" data-reveal>Performance global</span>
+                    <h2 class="title" data-split-words>Números que falam <em>por si</em></h2>
+                    <p class="lead" data-reveal style="--d:2">Audiência construída em anos de presença consistente nas maiores plataformas de entretenimento do mundo.</p>
+                </div>
 
-        .ph-stat-box:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
+                <div class="kpi-grid" data-reveal="scale">
+                    <div class="kpi"><span class="kpi-value" data-count="97.4" data-decimals="1" data-suffix="M+">97.4M+</span><span class="kpi-label">Visualizações totais</span></div>
+                    <div class="kpi"><span class="kpi-value" data-count="146" data-suffix="K+">146K+</span><span class="kpi-label">Seguidores somados</span></div>
+                    <div class="kpi"><span class="kpi-value" data-count="3.08" data-decimals="2" data-suffix="M+">3.08M+</span><span class="kpi-label">Acessos ao perfil</span></div>
+                    <div class="kpi"><span class="kpi-value" data-count="5" data-prefix="Top " data-suffix="%">Top 5%</span><span class="kpi-label">Ranking mundial</span></div>
+                </div>
 
-        .ph-icon-top {
-            font-size: 2.5rem;
-            color: #ff9000;
-            margin-bottom: 15px;
-        }
+                <div class="tabs" data-tabs>
+                    <div class="tab-list" role="tablist" aria-label="Estatísticas por plataforma">
+                        <span class="tab-indicator" aria-hidden="true"></span>
+                        <button class="tab" role="tab" id="tab-ig" aria-controls="panel-ig" aria-selected="true">Instagram</button>
+                        <button class="tab" role="tab" id="tab-xv" aria-controls="panel-xv" aria-selected="false" tabindex="-1">XVideos</button>
+                        <button class="tab" role="tab" id="tab-ph" aria-controls="panel-ph" aria-selected="false" tabindex="-1">Pornhub</button>
+                    </div>
 
-        .ph-metric {
-            font-size: 2.2rem;
-            font-weight: 900;
-            color: #fff;
-            margin: 10px 0;
-        }
+                    <!-- Instagram -->
+                    <div class="tab-panel panel-grid split" id="panel-ig" role="tabpanel" aria-labelledby="tab-ig">
+                        <div class="card platform-card">
+                            <div class="platform-id">
+                                <span class="platform-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></span>
+                                <div><h3>@iluavip</h3><p>Conta profissional · perfil seletivo, <span id="ig-following">702</span> seguindo</p></div>
+                            </div>
+                            <div class="metric-list">
+                                <div class="metric"><strong id="ig-followers">92K</strong><span>Seguidores</span></div>
+                                <div class="metric"><strong id="ig-avg-likes">12.5K</strong><span>Média de likes</span></div>
+                                <div class="metric"><strong id="ig-engagement">14.5%</strong><span>Engajamento</span></div>
+                                <div class="metric"><strong id="ig-posts">111</strong><span>Posts</span></div>
+                            </div>
+                            <a class="btn btn-ghost btn-sm" href="https://www.instagram.com/iluavip" target="_blank" rel="noopener" data-track="Seguir Instagram">Seguir @iluavip</a>
+                        </div>
+                        <div class="card">
+                            <p class="card-title">Audiência <small>Instagram Insights</small></p>
+                            <div class="bars">
+                                <div class="bar-row"><div class="bar-head"><span>Homens</span><b>73%</b></div><div class="bar"><i style="--w:73%"></i></div></div>
+                                <div class="bar-row"><div class="bar-head"><span>Mulheres</span><b>27%</b></div><div class="bar"><i style="--w:27%"></i></div></div>
+                                <div class="bar-row"><div class="bar-head"><span>Brasil</span><b>68%</b></div><div class="bar"><i style="--w:68%"></i></div></div>
+                            </div>
+                            <div class="growth">
+                                <div><strong id="ig-month-growth">+3.2K</strong><span>Novos seguidores / mês</span></div>
+                                <div><strong id="ig-daily-growth">+107</strong><span>Média diária</span></div>
+                            </div>
+                            <div class="growth">
+                                <div><strong>25–34</strong><span>Faixa etária principal</span></div>
+                                <div><strong>68%</strong><span>Público brasileiro</span></div>
+                            </div>
+                        </div>
+                    </div>
 
-        .ph-label {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+                    <!-- XVideos -->
+                    <div class="tab-panel panel-grid split" id="panel-xv" role="tabpanel" aria-labelledby="tab-xv" hidden>
+                        <div class="card platform-card">
+                            <div class="platform-id">
+                                <span class="platform-logo">XV</span>
+                                <div><h3>XVideos</h3><p>Perfil oficial verificado</p></div>
+                            </div>
+                            <div class="metric-list">
+                                <div class="metric"><strong id="xv-video-views" data-count="93.9" data-decimals="1" data-suffix="M">93.9M</strong><span>Visualizações</span></div>
+                                <div class="metric"><strong id="xv-subscribers" data-count="37.2" data-decimals="1" data-suffix="K">37.2K</strong><span>Inscritos</span></div>
+                                <div class="metric"><strong id="xv-profile-views" data-count="1623638" data-sep=".">1.623.638</strong><span>Acessos ao perfil</span></div>
+                                <div class="metric"><strong data-count="5185" data-prefix="#">#5185</strong><span>Ranking mundial</span></div>
+                            </div>
+                            <a class="btn btn-ghost btn-sm" href="https://www.xvideos.com/iluavip#_tabAboutMe" target="_blank" rel="noopener" data-track="Perfil XVideos">Ver perfil oficial</a>
+                        </div>
+                        <div class="card">
+                            <p class="card-title">Acessos por região <small>Visualizações</small></p>
+                            <div class="bars">
+                                <div class="bar-row"><div class="bar-head"><span>Brasil <small>39.4M</small></span><b id="xv-brazil-percent">42%</b></div><div class="bar"><i style="--w:42%"></i></div></div>
+                                <div class="bar-row"><div class="bar-head"><span>Estados Unidos <small>16.9M</small></span><b id="xv-usa-percent">18%</b></div><div class="bar"><i style="--w:18%"></i></div></div>
+                                <div class="bar-row"><div class="bar-head"><span>Portugal <small>11.3M</small></span><b id="xv-portugal-percent">12%</b></div><div class="bar"><i style="--w:12%"></i></div></div>
+                                <div class="bar-row"><div class="bar-head"><span>Outros países <small>26.3M</small></span><b id="xv-others-percent">28%</b></div><div class="bar"><i style="--w:28%"></i></div></div>
+                            </div>
+                        </div>
+                    </div>
 
-        .ph-change {
-            color: #4caf50;
-            font-size: 0.85rem;
-            display: block;
-            margin-top: 10px;
-        }
+                    <!-- Pornhub -->
+                    <div class="tab-panel panel-grid split" id="panel-ph" role="tabpanel" aria-labelledby="tab-ph" hidden>
+                        <div class="card platform-card">
+                            <div class="platform-id">
+                                <span class="platform-logo">PH</span>
+                                <div><h3>Pornhub</h3><p>Perfil de modelo · lua-couto</p></div>
+                            </div>
+                            <div class="metric-list">
+                                <div class="metric"><strong id="ph-video-views" data-count="3.6" data-decimals="1" data-suffix="M">3.6M</strong><span>Visualizações</span></div>
+                                <div class="metric"><strong id="ph-subscribers" data-count="17.1" data-decimals="1" data-suffix="K">17.1K</strong><span>Inscritos</span></div>
+                                <div class="metric"><strong id="ph-profile-views" data-count="1.46" data-decimals="2" data-suffix="M">1.46M</strong><span>Visitas ao perfil</span></div>
+                                <div class="metric"><strong>Top 5%</strong><span>Mundial</span></div>
+                            </div>
+                            <a class="btn btn-ghost btn-sm" href="https://pt.pornhub.com/model/lua-couto" target="_blank" rel="noopener" data-track="Perfil Pornhub">Ver perfil completo</a>
+                        </div>
+                        <div class="card">
+                            <p class="card-title">Rankings de modelo</p>
+                            <div class="rank-list" style="grid-template-columns: repeat(2, 1fr);">
+                                <div class="rank"><span>Modelo</span><strong id="ph-model-ranking" data-count="3575" data-prefix="#">#3575</strong><small>↑ 48 posições no mês</small></div>
+                                <div class="rank"><span>Semanal</span><strong id="ph-weekly-ranking" data-count="3552" data-prefix="#">#3552</strong><small>Top 5% mundial</small></div>
+                                <div class="rank"><span>Mensal</span><strong id="ph-monthly-ranking" data-count="3575" data-prefix="#">#3575</strong><small>Em ascensão</small></div>
+                                <div class="rank"><span>Anual</span><strong id="ph-yearly-ranking" data-count="3570" data-prefix="#">#3570</strong><small>Melhor desempenho</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        .ph-big-stat {
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-            backdrop-filter: blur(15px);
-            border: 2px solid rgba(255, 144, 0, 0.3);
-            transition: all 0.3s ease;
-        }
+                <p class="data-note">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                    Dados públicos das plataformas e Google Analytics 4
+                </p>
+            </div>
+        </section>
 
-        .ph-big-stat:hover {
-            transform: scale(1.05);
-            border-color: #ff9000;
-            background: rgba(0, 0, 0, 0.4);
-        }
+        <!-- ====== PARCERIAS + PORTFÓLIO ====== -->
+        <section class="section" id="portfolio">
+            <div class="container">
+                <div class="partner-grid">
+                    <div class="port-title">
+                        <span class="eyebrow" data-reveal>Espaço patrocinado</span>
+                        <h2 class="title" data-split-words>Sua marca diante de uma audiência <em>fiel</em></h2>
+                        <p class="lead" data-reveal style="--d:2">O espaço ideal para marcas, fotógrafos e agências que querem se conectar com um público engajado e de alto valor. Referência no universo masculino, Luana Couto une sensualidade e marketing de alto impacto para criar experiências marcantes e resultados reais.</p>
+                        <div class="hero-actions" style="margin-top:32px;--d:3" data-reveal>
+                            <a class="btn btn-gold" href="https://luanacouto.linkbio.co" target="_blank" rel="noopener" data-track="Seja um parceiro" data-magnetic>
+                                Seja um parceiro
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="impact-list" data-reveal="right">
+                        <div class="impact"><strong data-count="239000" data-prefix="+" data-sep=".">+239.000</strong><span>Alcance mensal</span></div>
+                        <div class="impact"><strong data-count="700000" data-prefix="+" data-sep=".">+700.000</strong><span>Impressões de marca</span></div>
+                        <div class="impact"><strong data-count="98" data-suffix="%">98%</strong><span>Taxa de fidelidade</span></div>
+                    </div>
+                </div>
 
-        .ph-big-icon {
-            font-size: 3rem;
-            color: #ff9000;
-            margin-bottom: 20px;
-            display: block;
-        }
+                <div class="filters" role="group" aria-label="Filtrar portfólio">
+                    <button class="filter" type="button" data-filter="all" aria-pressed="true">Todas</button>
+                    <button class="filter" type="button" data-filter="1" aria-pressed="false">Casual</button>
+                    <button class="filter" type="button" data-filter="2" aria-pressed="false">Sensual</button>
+                    <button class="filter" type="button" data-filter="3" aria-pressed="false">Artístico</button>
+                </div>
 
-        .ph-big-number {
-            font-size: 3.5rem;
-            font-weight: 900;
-            color: #fff;
-            margin: 15px 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
+                <div class="gallery">
+                    <figure class="shot" data-category="1" data-reveal>
+                        <a class="shot-open" href="img/portfolio/portfolio-01.jpg" aria-label="Ampliar foto"><picture><source srcset="img/portfolio/portfolio-01.webp" type="image/webp"><img loading="lazy" src="img/portfolio/portfolio-01.jpg" alt="Luana Couto iluavip ensaio casual sexy no Privacy e OnlyFans" title="Luana Couto - Modelo Profissional" width="1024" height="768"></picture></a>
+                        <span class="shot-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+                        <figcaption class="shot-meta"><span>Casual</span><a class="shot-credit" href="https://www.instagram.com/valm.iirr/" target="_blank" rel="noopener">Valmir Dacil <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></figcaption>
+                    </figure>
+                    <figure class="shot" data-category="2" data-reveal style="--d:1">
+                        <a class="shot-open" href="img/portfolio/portfolio-02.jpg" aria-label="Ampliar foto"><picture><source srcset="img/portfolio/portfolio-02.webp" type="image/webp"><img loading="lazy" src="img/portfolio/portfolio-02.jpg" alt="Luana Couto lua couto sensualidade telegram vip pornhub e xvideos" title="Luana Couto - Sensualidade e Elegância" width="1024" height="768"></picture></a>
+                        <span class="shot-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+                        <figcaption class="shot-meta"><span>Sensual</span><a class="shot-credit" href="https://www.instagram.com/ovulgojesus/" target="_blank" rel="noopener">Ciero <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></figcaption>
+                    </figure>
+                    <figure class="shot" data-category="1" data-reveal style="--d:2">
+                        <a class="shot-open" href="img/portfolio/portfolio-03.jpg" aria-label="Ampliar foto"><picture><source srcset="img/portfolio/portfolio-03.webp" type="image/webp"><img loading="lazy" src="img/portfolio/portfolio-03.jpg" alt="Luana Couto sexy conteúdo adulto xvideos luxo" width="1024" height="768"></picture></a>
+                        <span class="shot-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+                        <figcaption class="shot-meta"><span>Casual</span><a class="shot-credit" href="https://www.instagram.com/jayrophotography.oficial/" target="_blank" rel="noopener">Jayro Fotógrafo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></figcaption>
+                    </figure>
+                    <figure class="shot" data-category="2" data-reveal>
+                        <a class="shot-open" href="img/portfolio/portfolio-04.jpg" aria-label="Ampliar foto"><picture><source srcset="img/portfolio/portfolio-04.webp" type="image/webp"><img loading="lazy" src="img/portfolio/portfolio-04.jpg" alt="Luana Couto iluavip pornografia artística elegante" width="1024" height="768"></picture></a>
+                        <span class="shot-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+                        <figcaption class="shot-meta"><span>Sensual</span><a class="shot-credit" href="https://www.instagram.com/valm.iirr/" target="_blank" rel="noopener">Valmir Dacil <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></figcaption>
+                    </figure>
+                    <figure class="shot" data-category="3" data-reveal style="--d:1">
+                        <a class="shot-open" href="img/portfolio/portfolio-05.jpg" aria-label="Ampliar foto"><picture><source srcset="img/portfolio/portfolio-05.webp" type="image/webp"><img loading="lazy" src="img/portfolio/portfolio-05.jpg" alt="Luana Couto lua couto ensaio exclusivo sexy" title="Luana Couto - Mundo Secreto" width="1024" height="768"></picture></a>
+                        <span class="shot-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+                        <figcaption class="shot-meta"><span>Artístico</span><a class="shot-credit" href="https://www.instagram.com/_rafaferrer/" target="_blank" rel="noopener">Rafael Ferrer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></figcaption>
+                    </figure>
+                    <figure class="shot" data-category="3" data-reveal style="--d:2">
+                        <a class="shot-open" href="img/portfolio/portfolio-06.jpg" aria-label="Ampliar foto"><img loading="lazy" src="img/portfolio/portfolio-06.jpg" alt="Luana Couto iluavip modelo brasileira sensual" title="Luana Couto - Referência Nacional" width="1024" height="768"></a>
+                        <span class="shot-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+                        <figcaption class="shot-meta"><span>Artístico</span><a class="shot-credit" href="https://www.instagram.com/carolineriegerfotografa" target="_blank" rel="noopener">Caroline Rieger <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
 
-        .ph-big-label {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
+        <!-- ====== MUNDO SECRETO (PLATAFORMAS) ====== -->
+        <section class="section section-alt section-glow" id="package">
+            <div class="container">
+                <div class="section-head center section-title">
+                    <span class="eyebrow" data-reveal>Mundo secreto</span>
+                    <h2 class="title" data-split-words>Escolha a sua <em>porta de entrada</em></h2>
+                    <p class="lead" data-reveal style="--d:2">Atrás das câmeras existe um universo onde cada olhar, cada gesto e cada suspiro contam uma história. Um convite para explorar camadas de sensualidade e elegância, onde o segredo mais tentador está à espera de ser revelado.</p>
+                </div>
 
-        .ph-profile-btn {
-            display: inline-block;
-            background: linear-gradient(90deg, #ff9000, #ff6000);
-            color: white;
-            padding: 18px 45px;
-            border-radius: 50px;
-            font-weight: 700;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(255, 144, 0, 0.4);
-        }
+                <div class="platform-grid">
+                    <article class="tier tier-featured" data-tilt data-reveal="scale">
+                        <div class="tier-media">
+                            <img loading="lazy" src="img/portfolio/privacy.jpg" alt="Luana Couto no Privacy.com.br" width="1024" height="768">
+                            <span class="tier-price">R$19,99<small>/mês</small></span>
+                            <span class="tier-flag">Mais ativa</span>
+                        </div>
+                        <div class="tier-body">
+                            <h3>Privacy.com.br</h3>
+                            <p>A plataforma nº 1 do Brasil e o lugar onde estou mais ativa: conteúdo exclusivo publicado todos os dias.</p>
+                            <ul class="tier-perks">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Fotos e vídeos exclusivos diários</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Contato direto comigo</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Pagamento seguro pela plataforma</li>
+                            </ul>
+                            <a class="btn btn-gold" href="https://privacy.com.br/checkout/iluavip" target="_blank" rel="noopener" title="Privacy - Assinar Agora com Desconto Exclusivo" data-track="Card Privacy" data-magnetic>
+                                Assinar Privacy agora
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                            </a>
+                            <p class="tier-sub"><a href="privacy.html">Saiba mais sobre o Privacy da Luana</a></p>
+                        </div>
+                    </article>
 
-        .ph-profile-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 144, 0, 0.6);
-            color: white;
-            text-decoration: none;
-        }
-    </style>
-    <!-- ====== END PORNHUB STATS ====== -->
+                    <article class="tier" data-tilt data-reveal style="--d:1">
+                        <div class="tier-media"><picture><source srcset="img/portfolio/onlyfans.webp" type="image/webp"><img loading="lazy" src="img/portfolio/onlyfans.jpg" alt="Luana Couto no OnlyFans" width="1024" height="768"></picture><span class="tier-price">US$7,00</span></div>
+                        <div class="tier-body"><h3>OnlyFans</h3><p>Mostrando para o mundo o que o Brasil tem de melhor.</p><a class="link-arrow" href="https://onlyfans.com/luanathequeen" target="_blank" rel="noopener" data-track="OnlyFans"><span>Entrar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+                    </article>
 
-    <!-- ====== START BEAUTY PACKAGE ======  -->
-    <section class="package padding" id="package" data-scroll-index="4">
+                    <article class="tier" data-tilt data-reveal style="--d:2">
+                        <div class="tier-media"><picture><source srcset="img/portfolio/telegramvip.webp" type="image/webp"><img loading="lazy" src="img/portfolio/telegramvip.jpg" alt="Telegram VIP da Luana Couto" width="1024" height="768"></picture><span class="tier-price">R$11,99</span></div>
+                        <div class="tier-body"><h3>Telegram VIP</h3><p>Aqui você consegue sentir o meu gostinho.</p><a class="link-arrow" href="http://t.me/LuanaCoutoBot" target="_blank" rel="noopener" data-track="Telegram VIP"><span>Entrar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+                    </article>
+
+                    <article class="tier" data-tilt data-reveal style="--d:1">
+                        <div class="tier-media"><picture><source srcset="img/portfolio/pack.webp" type="image/webp"><img loading="lazy" src="img/portfolio/pack.jpg" alt="Packs da Luana Couto" width="1024" height="768"></picture><span class="tier-price">R$9,99</span></div>
+                        <div class="tier-body"><h3>Packs</h3><p>Packs com as suas fantasias favoritas.</p><a class="link-arrow" href="https://queropack.com/Loja/luanav-couto" target="_blank" rel="noopener" data-track="Packs"><span>Entrar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+                    </article>
+
+                    <article class="tier" data-tilt data-reveal style="--d:2">
+                        <div class="tier-media"><picture><source srcset="img/portfolio/manyvids.webp" type="image/webp"><img loading="lazy" src="img/portfolio/manyvids.jpg" alt="Luana Couto no ManyVids" width="1024" height="768"></picture><span class="tier-price">US$3,00</span></div>
+                        <div class="tier-body"><h3>ManyVids</h3><p>Vídeos sob medida para você.</p><a class="link-arrow" href="https://www.manyvids.com/Profile/1008287984/iluavip/Store/Videos" target="_blank" rel="noopener" data-track="ManyVids"><span>Entrar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+                    </article>
+
+                    <article class="tier" data-tilt data-reveal style="--d:3">
+                        <div class="tier-media"><picture><source srcset="img/portfolio/closefans.webp" type="image/webp"><img loading="lazy" src="img/portfolio/closefans.jpg" alt="Luana Couto no Close Fans" width="1024" height="768"></picture><span class="tier-price">R$9,99</span></div>
+                        <div class="tier-body"><h3>Close Fans</h3><p>Levo você à loucura.</p><a class="link-arrow" href="https://close.fans/luanacouto" target="_blank" rel="noopener" data-track="Close Fans"><span>Entrar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+                    </article>
+
+                    <article class="tier" data-tilt data-reveal style="--d:1">
+                        <div class="tier-media"><picture><source srcset="img/portfolio/fanfever.webp" type="image/webp"><img loading="lazy" src="img/portfolio/fanfever.jpg" alt="Luana Couto no FanFever" width="1024" height="768"></picture><span class="tier-price">R$9,99</span></div>
+                        <div class="tier-body"><h3>FanFever</h3><p>Aqui você se conecta somente comigo.</p><a class="link-arrow" href="https://fanfever.com/br/iluavip" target="_blank" rel="noopener" data-track="FanFever"><span>Entrar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+                    </article>
+
+                    <article class="tier" data-tilt data-reveal style="--d:2">
+                        <div class="tier-media"><picture><source srcset="img/portfolio/pornhub.webp" type="image/webp"><img loading="lazy" src="img/portfolio/pornhub.jpg" alt="Luana Couto no Pornhub" width="1024" height="768"></picture><span class="tier-price">Grátis</span></div>
+                        <div class="tier-body"><h3>Pornhub</h3><p>Para o público internacional.</p><a class="link-arrow" href="https://pt.pornhub.com/model/lua-couto" target="_blank" rel="noopener" data-track="Pornhub"><span>Entrar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+                    </article>
+
+                    <article class="tier" data-tilt data-reveal style="--d:3">
+                        <div class="tier-media"><picture><source srcset="img/about-03.webp" type="image/webp"><img loading="lazy" src="img/about-03.jpg" alt="Todos os links oficiais da Luana Couto" width="853" height="1280" style="object-position:center 25%"></picture><span class="tier-price">Todos</span></div>
+                        <div class="tier-body"><h3>Meus links</h3><p>Todos os canais oficiais reunidos em um só lugar.</p><a class="link-arrow" href="https://luanacouto.linkbio.co" target="_blank" rel="noopener" data-track="Card Meus Links"><span>Ver todos</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== CTA FINAL ====== -->
+        <section class="finale">
+            <div class="finale-bg" data-parallax="0.12" aria-hidden="true"></div>
+            <div class="container">
+                <span class="eyebrow" data-reveal>Conteúdo exclusivo</span>
+                <h2 class="display" data-split-words>O segredo mais tentador <em>espera por você</em></h2>
+                <p class="lead" data-reveal style="--d:3">Acesse o perfil oficial no Privacy e acompanhe tudo de perto, com conteúdo novo todos os dias.</p>
+                <div class="hero-actions" data-reveal style="--d:4">
+                    <a class="btn btn-gold" href="https://privacy.com.br/checkout/iluavip" target="_blank" rel="noopener" data-track="Final Privacy" data-magnetic>
+                        Assinar Privacy
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                    <a class="btn btn-ghost" href="https://luanacouto.linkbio.co" target="_blank" rel="noopener" data-track="Final Meus Links" data-magnetic>Meus links</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="site-footer">
         <div class="container">
-
-            <!-- START PACKAGE TITLE -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title text-center">
-                        <h2 class="heading-primary mb-5">Mundo secreto</h2>
-                        <p class="mb-5">Atrás das câmeras, existe um universo fascinante onde cada olhar, cada gesto e cada suspiro contam uma história. Entre os bastidores, os limites entre o real e o imaginário se dissolvem, revelando uma mulher que domina a arte da sedução e do encantamento.
-
-                            Neste espaço exclusivo, você será convidado a explorar camadas de sensualidade e elegância. Cada passo dentro desse mundo é uma jornada de descoberta, onde a beleza ganha formas inesperadas e o desejo é sussurrado no ar. Prepare-se para mergulhar em uma experiência única, envolvente e inebriante, onde o segredo mais tentador está à espera de ser revelado.
-
-                        </p>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a class="brand" href="#home" aria-label="Luana Couto — voltar ao início">
+                        <picture><source srcset="img/logo-pimenta.webp" type="image/webp"><img loading="lazy" src="img/logo-pimenta.png" alt="" width="499" height="538"></picture>
+                        <span class="brand-name">Luana Couto</span>
+                    </a>
+                    <p>Site oficial da modelo e criadora de conteúdo Luana Couto (@iluavip). Conteúdo destinado a maiores de 18 anos.</p>
+                    <div class="socials">
+                        <a href="https://www.instagram.com/iluavip/" target="_blank" rel="noopener" aria-label="Instagram @iluavip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a>
+                        <a href="https://www.instagram.com/iluacouto/" target="_blank" rel="noopener" aria-label="Instagram @iluacouto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a>
+                        <a href="https://twitter.com/iluavip" target="_blank" rel="noopener" aria-label="X (Twitter) @iluavip"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.17h1.7L7.4 4.73H5.58l11.09 14.44Z"/></svg></a>
+                        <a href="https://luanacouto.linkbio.co" target="_blank" rel="noopener" aria-label="Todos os links"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
                     </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#about">Modelo</a></li>
+                        <li><a href="#performance">Números</a></li>
+                        <li><a href="#portfolio">Parcerias</a></li>
+                        <li><a href="#package">Mundo secreto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col privacy-links">
+                    <h4>Privacy exclusivo</h4>
+                    <ul>
+                        <li><a href="privacy.html">Luana no Privacy</a></li>
+                        <li><a href="https://privacy.com.br/checkout/iluavip" target="_blank" rel="noopener" data-track="Footer Privacy">Assinar agora</a></li>
+                        <li><a href="index_en.html" hreflang="en">English version</a></li>
+                    </ul>
                 </div>
             </div>
-            <!-- END PACKAGE TITLE -->
 
-            <div class="package-carousel owl-carousel">
-                <!-- START SINGLE PACKAGE -->
-                <div class="single-package">
-                    <div class="img">
-                        <a href="#"><picture><source srcset="img/portfolio/onlyfans.webp" type="image/webp"><img data-webp loading="lazy" src="img/portfolio/onlyfans.jpg" alt="package-image"></picture></a>
+            <p class="footer-wordmark" aria-hidden="true">Luana Couto</p>
 
-                    </div>
-                    <span class="pack_price">$7,00</span>
-                    <div class="package-hover">
-                        <h5>Onlyfans</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <!-- <span class="time_zone">PROMOÇÃO!</span> -->
-                        <p>Mostrando para o mundo o que o Brasil tem de melhor!</p>
-                        <div class="button-bg">
-                            <a target="_blank" href="https://onlyfans.com/luanathequeen"><button class="button button-fill">ENTRAR</button></a>
-                            
-                        </div>
-
-                    </div>
-                    
-                </div>
-                <!-- END SINGLE PACKAGE -->
-
-                <!-- START SINGLE PACKAGE -->
-                <div class="single-package">
-                    <div class="img">
-                        <a href="#"><img loading="lazy" src="img/portfolio/privacy.jpg" alt="package-image"></a>
-
-                    </div>
-                    <span class="pack_price">R$19,99</span>
-                    <div class="package-hover">
-                        <h5>PRIVACY.COM.BR #1</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <!-- <span class="time_zone">PROMOÇÃO!</span> -->
-                        <p>🎆 PLATAFORMA #1 DO BRASIL! Conteúdo exclusivo diário no PRIVACY.COM.BR - Onde estou mais ativa!</p>
-                        <div class="button-bg">
-                            <a target="_blank" href="https://privacy.com.br/checkout/iluavip" title="Privacy - Assinar Agora com Desconto Exclusivo" rel="dofollow"><button class="button button-fill" style="background: linear-gradient(45deg, #ff0066, #ff6600); font-size: 1.2em; font-weight: bold; animation: pulse 2s infinite;">🔥 ASSINAR PRIVACY AGORA</button></a>
-                        </div>
-                        <div style="margin-top: 10px;">
-                            <small><a href="privacy.html" style="color: #ff0066;">Saiba mais sobre o Privacy da Luana</a></small>
-                        </div>
-                    </div>
-                </div>
-                <!-- END SINGLE PACKAGE -->
-
-                <!-- START SINGLE PACKAGE -->
-                <div class="single-package">
-                    <div class="img">
-                        <a href="#"><picture><source srcset="img/portfolio/telegramvip.webp" type="image/webp"><img data-webp loading="lazy" src="img/portfolio/telegramvip.jpg" alt="package-image"></picture></a>
-
-                    </div>
-                    <span class="pack_price">R$11,99</span>
-                    <div class="package-hover">
-                        <h5>Telegram vip</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <!-- <span class="time_zone">PROMOÇÃO!</span> -->
-                        <p>Aqui você consegue sentir o meu gostinho!</p>
-                        <div class="button-bg">
-                            <a target="_blank" href="http://t.me/LuanaCoutoBot"><button class="button button-fill">ENTRAR</button></a>                        </div>
-                    </div>
-                </div>
-                <!-- END SINGLE PACKAGE -->
-
-                <!-- START SINGLE PACKAGE -->
-                <div class="single-package">
-                    <div class="img">
-                        <a href="#"><picture><source srcset="img/portfolio/pack.webp" type="image/webp"><img data-webp loading="lazy" src="img/portfolio/pack.jpg" alt="package-image"></picture></a>
-
-                    </div>
-                    <span class="pack_price">R$9,99</span>
-                    <div class="package-hover">
-                        <h5>Pack's</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <!-- <span class="time_zone">PROMOÇÃO!</span> -->
-                        <p>Pack's com as suas fantasias eróticas!</p>
-                        <div class="button-bg">
-                            <a target="_blank" href="https://queropack.com/Loja/luanav-couto"><button class="button button-fill">ENTRAR</button></a>                        </div>
-                    </div>
-                </div>
-                <!-- END SINGLE PACKAGE -->
-
-                <!-- START SINGLE PACKAGE -->
-                <div class="single-package">
-                    <div class="img">
-                        <a href="#"><picture><source srcset="img/portfolio/manyvids.webp" type="image/webp"><img data-webp loading="lazy" src="img/portfolio/manyvids.jpg" alt="package-image"></picture></a>
-
-                    </div>
-                    <span class="pack_price">$3,00</span>
-                    <div class="package-hover">
-                        <h5>ManyVideos</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <!-- <span class="time_zone">PROMOÇÃO!</span> -->
-                        <p>Aqui você vai se deliciar com videos sob medida!</p>
-                        <div class="button-bg">
-                            <a target="_blank" href="https://www.manyvids.com/Profile/1008287984/iluavip/Store/Videos"><button class="button button-fill">ENTRAR</button></a>                        </div>
-                    </div>
-                </div>
-                <!-- END SINGLE PACKAGE -->
-
-                <!-- START SINGLE PACKAGE -->
-                <div class="single-package">
-                    <div class="img">
-                        <a href="#"><picture><source srcset="img/portfolio/pornhub.webp" type="image/webp"><img data-webp loading="lazy" src="img/portfolio/pornhub.jpg" alt="package-image"></picture></a>
-
-                    </div>
-                    <span class="pack_price">R$0</span>
-                    <div class="package-hover">
-                        <h5>PornHub</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <!-- <span class="time_zone">PROMOÇÃO!</span> -->
-                        <p>Aqui é para os(as) gringos(as)!</p>
-                        <div class="button-bg">
-                            <a target="_blank" href="https://pt.pornhub.com/model/lua-couto"><button class="button button-fill">ENTRAR</button></a>                        </div>
-                    </div>
-                </div>
-                <!-- END SINGLLE PACKAGE -->
-
-                 <!-- START SINGLE PACKAGE -->
-                 <div class="single-package">
-                    <div class="img">
-                        <a href="#"><picture><source srcset="img/portfolio/closefans.webp" type="image/webp"><img data-webp loading="lazy" src="img/portfolio/closefans.jpg" alt="package-image"></picture></a>
-
-                    </div>
-                    <span class="pack_price">R$9,99</span>
-                    <div class="package-hover">
-                        <h5>Close Fans</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <!-- <span class="time_zone">PROMOÇÃO!</span> -->
-                        <p>Levo você a loucura!</p>
-                        <div class="button-bg">
-                            <a target="_blank" href="https://close.fans/luanacouto"><button class="button button-fill">ENTRAR</button></a>                        </div>
-                    </div>
-                </div>
-                <!-- END SINGLLE PACKAGE -->
-
-                <!-- START SINGLE PACKAGE -->
-                <div class="single-package">
-                    <div class="img">
-                        <a href="#"><picture><source srcset="img/portfolio/fanfever.webp" type="image/webp"><img data-webp loading="lazy" src="img/portfolio/fanfever.jpg" alt="package-image"></picture></a>
-
-                    </div>
-                    <span class="pack_price">R$9,99</span>
-                    <div class="package-hover">
-                        <h5>FanFever</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <!-- <span class="time_zone">PROMOÇÃO!</span> -->
-                        <p>Aqui você se conecta SOMENTE comigo!</p>
-                        <div class="button-bg">
-                            <a target="_blank" href="https://fanfever.com/br/iluavip"><button class="button button-fill">ENTRAR</button></a>                        </div>
-                    </div>
-                </div>
-                <!-- END SINGLLE PACKAGE -->
-
-                 <!-- START SINGLE PACKAGE -->
-                <!-- <div class="single-package">
-                    <div class="img">
-                        <a href="#"><picture><source srcset="img/portfolio/sheer.webp" type="image/webp"><img data-webp loading="lazy" src="img/portfolio/sheer.jpg" alt="package-image"></picture></a>
-
-                    </div>
-                    <span class="pack_price">R$0</span>
-                    <div class="package-hover">
-                        <h5>Sheer</h5>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <span class="time_zone">PROMOÇÃO!</span>
-                        <p>Em construção...</p>
-                        <div class="button-bg">
-                            <a target="_blank" href="https://linktr.ee/otimiZesse/"><button class="button button-fill">ENTRAR</button></a>                        </div>
-                    </div>
-                </div> -->
-                <!-- END SINGLLE PACKAGE -->
-
+            <div class="footer-bottom copyright">
+                <span>&copy; <span data-year>2026</span> Luana Couto. Todos os direitos reservados.</span>
+                <span>Desenvolvido por <a target="_blank" rel="noopener" href="https://linktr.ee/otimiZesse/" title="otimiZesse">otimiZesse</a></span>
             </div>
         </div>
-    </section>
-    <!-- ======== END BEAUTY PACKAGE ====== -->
+    </footer>
 
-    <!-- ====== START FOOTER ======  -->
-    <section class="footer">
-        <div class="container">
-            <div class="row">
-
-                <!-- START FOOTER BOTTOM -->
-                <div class="offset-md-3 col-md-6 offset-md-3">
-
-                    <!-- FOOTER LOGO -->
-                    <a class="navbar-brand" href="#home">
-                        <picture><source srcset="img/logo.webp" type="image/webp"><img data-webp loading="lazy" src="img/logo.png" alt="footer-Logo" class="logo"></picture></a>
-                    <h2 class="heading-tertiary mb-3">Luana Couto</h2>
-
-                    <!-- START QUICK ICONS -->
-                    <div class="quick-links">
-                        <ul class="links">
-                            <li>
-                                <a href="#home" data-scroll-nav="0">Luana Couto</a>&#124;
-                            </li>
-                            <li>
-                                <a href="#about" data-scroll-nav="1">Modelo</a>&#124;
-                            </li>
-                            <li>
-                                <a href="#portfolio" data-scroll-nav="2">Espaço Patrocinado</a>&#124;
-                            </li>
-                            <li>
-                                <a href="#package" data-scroll-nav="3">Mundo secreto</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- END QUICK ICONS -->
-
-                    <!-- START SOCIAL ICONS -->
-                    <div class="social-links">
-                        <ul>
-                            <!-- Instagram @iluavip -->
-                            <li>
-                                <a href="https://www.instagram.com/iluavip/" target="_blank">
-                                    <i class="fa fa-instagram fa-fw"></i>
-                                </a>
-                            </li>
-                    
-                            <!-- Twitter @iluavip -->
-                            <li>
-                                <a href="https://twitter.com/iluavip" target="_blank">
-                                    <i class="fa fa-twitter fa-fw"></i>
-                                </a>
-                            </li>
-                    
-                            <!-- Instagram @iluacouto -->
-                            <li>
-                                <a href="https://www.instagram.com/iluacouto/" target="_blank">
-                                    <i class="fa fa-instagram fa-fw"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- END SOCIAL ICONS -->
-
-                    <!-- START PRIVACY EXCLUSIVE LINKS -->
-                    <div class="privacy-links mt-4">
-                        <h4 class="text-primary mb-3">Privacy Exclusivo</h4>
-                        <ul class="links">
-                            <li>
-                                <a href="privacy.html" target="_blank">Luana no Privacy</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- END PRIVACY EXCLUSIVE LINKS -->
-
-                    <!-- START RIGHTS -->
-                    <div class="copyright">
-                        <h5>&copy; Todos os direitos reservados pela <a target="_blank" href="https://linktr.ee/otimiZesse/" title="otimiZesse" class="text-primary">otimiZesse</a></h5>
-                    </div>
-                    <!-- END RIGHTS -->
-
-                </div>
-                <!-- END FOOTER BOTTOM -->
-
-            </div>
-        </div>
-    </section>
-    <!-- ====== END FOOTER ======  -->
-
-    <!-- ====== JS ======  -->
-    <!--jquery-3.3.1 js-->
-    <script src="js/jquery-3.3.1.min.js"></script>
-
-    <!-- popper js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-
-    <!-- bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- scrollIt js -->
-    <script src="js/scrollIt.min.js"></script>
-
-    <!-- filter js -->
-    <script src="js/jquery.filterizr.min.js"></script>
-
-    <!-- waypoints js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-
-    <!-- owl carousel js -->
-    <script src="js/owl.carousel.min.js"></script>
-
-    <!-- validator js -->
-    <script src="js/validator.js" defer></script>
-
-    <!-- paroller js -->
-    <script src="js/jquery.paroller.min.js" defer></script>
-    <script>$(document).ready(function(){$('.jumbotron').paroller();});</script>
-
-    <!-- coustom js -->
-    <script src="js/main.js?v=20261010c" defer></script>
-
-    <!-- WhatsApp Floating Button -->
-    <a href="https://luanacouto.linkbio.co" class="whatsapp-float" target="_blank">
-        <i class="fa fa-whatsapp"></i>
+    <!-- Flutuantes -->
+    <a href="https://luanacouto.linkbio.co" class="float-links whatsapp-float" target="_blank" rel="noopener" aria-label="Fale comigo — todos os links" data-track="Botão flutuante">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>
     </a>
+    <button class="to-top" type="button" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+    </button>
 
-    <!-- Lightbox JS -->
-    <script src="js/lightbox.js" defer></script>
+    <!-- Lightbox -->
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Visualização da foto" data-label-photo="Foto" hidden>
+        <figure>
+            <img src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+        <button class="lb-btn lb-close" type="button" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+        <button class="lb-btn lb-prev" type="button" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <button class="lb-btn lb-next" type="button" aria-label="Próxima foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+        <span class="lb-count"></span>
+    </div>
+
+    <script src="js/site.js?v=20261101e" defer></script>
 
     <!-- Instagram Stats -->
-    <script src="js/reset-instagram-stats.js"></script>
+    <script src="js/reset-instagram-stats.js?v=20261101e"></script>
+
 
     <!-- SEO Authority Section (Subtle but Powerful for Crawlers) -->
     <div style="display: none; visibility: hidden; height: 0; width: 0; overflow: hidden;">
